@@ -2,7 +2,13 @@ html,
 body {
   overflow-x: hidden;
   height: 100%;
-  color: #051B1F;
+  color: #000000;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  font-weight: 500;
 }
 
 .box {
@@ -10,21 +16,14 @@ body {
   width: 100vw;
 }
 
-.wrapper {
+.main {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
-}
-
-.main {
-  flex: 1 0 auto;
+  min-height: 100vh;
 }
 
 .footer {
   flex: 0 0 auto;
 }
 
-.container {
-  width: 80%;
-  margin: 0 auto;
-}
+

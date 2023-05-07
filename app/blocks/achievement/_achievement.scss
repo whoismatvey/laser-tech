@@ -1,0 +1,74 @@
+
+  
+  div.swiper.achievement-slider {
+    width: 1300px;
+    padding-top: 6.125rem;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+  }
+  
+  .swiper-pagination-bullet,
+  .swiper-pagination-bullet-active {
+    background: #fff;
+  }
+  
+  .swiper-pagination {
+    bottom: 1.25rem !important;
+  }
+  
+  div.achievement-slider__slide {
+    width: 18.75rem;
+    height: 28.125rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: self-start;
+    background: linear-gradient(55.51deg, #D95E6E -8.69%, #FF2626 58.22%);
+    border-radius: 50px;
+    height: 576px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  div.achievement-slider__slide h2 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    color: #FFFFFF;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  
+  .swiper-slide-active.achievement-slider__slide div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  div.swiper-slide-prev {
+    background: linear-gradient(352.85deg, #985758 3.26%, #FA6467 96.21%);
+  }
+  
+  div.swiper-slide-next {
+    background: linear-gradient(352.85deg, #985758 3.26%, #FA6467 96.21%);
+  }
+  
+  div.achievement-slider__group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  div.swiper-3d {
+    perspective: 902px;
+  }
+  
+  
+  
+  

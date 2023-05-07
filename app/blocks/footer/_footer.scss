@@ -1,0 +1,108 @@
+.footer {
+	background-color: #000000;
+	color: #fff;
+	list-style-type: none;
+	font-size: 10px;
+
+	&__container{
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		padding: 50px 0;
+	}
+
+	&__col {
+		max-width: 142px;
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 14px;
+		margin-bottom: 15px;
+	}
+	
+	&__time {
+		margin-bottom: 20px;
+		max-width: 123px;
+		
+		li:not(:last-child) {
+			margin-bottom: 12px;
+		}
+	}
+
+	&__info {
+		font-weight: 600;
+		font-size: 12px;
+		
+		li:not(:last-child) {
+			margin-bottom: 5px;
+		}
+	}
+
+	&__catalog {
+		li:not(:last-child) {
+			margin-bottom: 8px;
+		}
+		li:hover {
+			background: linear-gradient(88.01deg, #730000 -9.57%, #FF0000 115.37%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+
+	&__contact {
+		max-width: 139px;
+		margin: 13px 0;
+	}	
+
+	&__adress {
+		max-width: 140px;
+	}
+
+	&__social {
+		margin-top: 13px;
+		display: flex;
+
+		img:not(:last-child) {
+			margin-right: 5px;
+		}
+	}
+
+	
+}
+
+.footer-bottom {
+	&__wrapper {
+		padding: 25px 0 50px 0;
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 14px;
+		margin-bottom: 14px;
+	}
+
+	&__content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__projects {
+		display: flex;
+	}
+
+	&__projects :not(:last-child) {
+		margin-right: 20px;
+	}
+
+	&__info {
+		font-size: 10px;
+		color: #919191;
+		max-width: 326px;
+	}
+}

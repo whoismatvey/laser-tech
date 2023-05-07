@@ -1,0 +1,90 @@
+.header {
+    &__container {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    &__wrapper {
+      display: flex;
+      padding: 19px 0 13px 0;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__list {
+      display: flex;
+
+      li {
+        margin-right: 25px;
+        font-weight: 600;
+        font-size: 16px;
+      }
+
+      li a:hover {
+        font-weight: 700;
+        background: linear-gradient(88.01deg, #730000 -9.57%, #FF0000 115.37%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+
+      li:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &__contact {
+      display: flex;
+    }
+
+    &__tel--bottom {
+      margin-bottom: 5px;
+    }
+
+    &__contact-left {
+      margin-right: 25px;
+    }
+
+    &__email {
+      font-weight: 700;
+    }
+
+    &__social {
+      display: flex;
+      margin-top: 10px;
+      margin-right: 11px;
+    }
+
+    &__social-link {
+      margin-right: 10px;
+    }
+
+    &__social-link:last-child {
+      margin-right: 0;
+    }
+
+    &__cart-num {
+      font-weight: 800;
+      font-size: 18px;
+      background: linear-gradient(53.19deg, #7D0000 14.23%, #BE0000 45.48%, #FF0000 85.39%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &__cart {
+      display: flex;
+      align-items: center;
+      img {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .active {
+    font-size: 16px;
+    background: linear-gradient(88.01deg, #730000 -9.57%, #FF0000 115.37%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  

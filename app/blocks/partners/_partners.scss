@@ -1,0 +1,26 @@
+.partners {
+    &__title {
+        font-weight: 700;
+        font-size: 48px;
+        text-align: center;
+        margin-bottom: 42px;
+    }
+}
+
+.partners-slider {
+    height: 100%;
+    position: relative;
+    &__wrapper {
+        padding: 42px 0 127px 0;
+    }
+}
+
+button.partners__button-prev {
+    left: 29px;
+}
+
+button.partners__button-next {
+    right: 29px;
+}
+
+
