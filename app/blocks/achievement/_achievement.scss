@@ -1,5 +1,4 @@
 
-  
   div.swiper.achievement-slider {
     width: 1300px;
     padding-top: 6.125rem;
@@ -52,11 +51,11 @@
     flex-direction: column;
   }
   
-  div.swiper-slide-prev {
+  div.swiper-slide-prev.achievement-slider__slide {
     background: linear-gradient(352.85deg, #985758 3.26%, #FA6467 96.21%);
   }
   
-  div.swiper-slide-next {
+  div.swiper-slide-next.achievement-slider__slide {
     background: linear-gradient(352.85deg, #985758 3.26%, #FA6467 96.21%);
   }
   
@@ -68,7 +67,7 @@
   div.swiper-3d {
     perspective: 902px;
   }
-  
+
   
   
   

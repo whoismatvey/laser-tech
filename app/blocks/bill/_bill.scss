@@ -1,0 +1,149 @@
+.bill {
+    &__container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    &__wrapper {
+        padding-top: 30px;
+    }
+    
+    &__background {
+       
+    }
+
+    &__body {
+        padding: 80px 37px 39px 37px;
+        font-family: 'Source Code Pro', monospace;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 23px;
+        background-image: url(/images/bill/bill-bc.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 957px;
+        height: 100%;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 44px;
+        background: linear-gradient(88.01deg, #730000 -9.57%, #FF0000 115.37%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        text-align: center;
+
+    }
+
+    &__desc {
+        font-size: 24px;
+        line-height: 29px;
+        text-align: center;
+        max-width: 828px;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 80px;
+        gap: 20px;
+    } 
+
+    &__heading {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 25px;
+        text-align: center;
+    }
+
+    &__contacts {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        gap: 40px;
+        margin: 20px 0 18px 0;
+    }
+
+    &__adress {
+        max-width: 170px;
+    }
+
+    &__goods {
+        padding: 15px 0;
+        border-bottom: 1px dashed #000;
+    }
+
+    &__good {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    &__text--bold {
+        font-weight: 600;
+    }
+
+    &__order {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__account {
+        padding: 15px 0;
+        border-bottom: 1px dashed #000;
+    }
+
+    &__discount {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+    }
+
+    &__delivery {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+    }
+
+    &__coupon {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__total {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 0;
+        border-bottom: 1px dashed #000;
+    }
+
+    &__message {
+        max-width: 390px;
+        padding: 15px 0;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 0;
+        border-top: 1px dashed #000;
+    }
+
+    &__thanks {
+        text-align: center;
+    }
+
+    &__hidden {
+        width: 100vw;
+        height: 40px;
+        background: #FFFFFF;
+        box-shadow: 0px -30px 30px rgba(0, 0, 0, 0.15);
+    }
+}

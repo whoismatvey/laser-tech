@@ -1,0 +1,67 @@
+.text-examples {
+    &__wrapper {
+        padding: 30px 0 80px 0;
+    }
+
+    &__header {
+        margin: 0 auto;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    &__title {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    &__desc {
+        text-align: center;
+        max-width: 580px;
+    }
+
+    &__heading {
+        font-weight: 600;
+        font-size: 20px;
+        background: linear-gradient(88.01deg, #730000 -9.57%, #FF0000 115.37%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        margin-bottom: 10px;
+    }
+
+    &__subtitle {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 5px;
+    }
+
+    &__list {
+        font-style: italic;
+        font-weight: 400;
+        font-size: 14px;
+
+        li {
+            list-style: disc;
+        }
+    }
+
+    &__point {
+        padding-left: 30px;
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+
+    &__point:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}

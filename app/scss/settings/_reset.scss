@@ -8,9 +8,10 @@ html{
   box-sizing: inherit;
 }
 
-ul[class],
-ol[class] {
-  padding: 0;
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
 }
 
 a {
@@ -159,4 +160,9 @@ button{
   background-color:transparent;
   padding: 0;
   outline:none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+font-weight: inherit;
 }

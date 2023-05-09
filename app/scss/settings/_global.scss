@@ -26,4 +26,39 @@ a {
   flex: 0 0 auto;
 }
 
+.container-1300 {
+  max-width: 1300px;
+  margin: 0 auto;
+}
 
+.container-1308 {
+  max-width: 1308px;
+  margin: 0 auto;
+}
+
+.container-right {
+  padding-left: calc((100% - 1300px) / 2);
+}
+
+.container-pl71 {
+  max-width: 1230px;
+  margin-left: 71px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.desc {
+  font-size: 14px;
+  color: #6A6A6A;
+}
+
+.red-text {
+  background: linear-gradient(88.01deg, #730000 -9.57%, #FF0000 115.37%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}

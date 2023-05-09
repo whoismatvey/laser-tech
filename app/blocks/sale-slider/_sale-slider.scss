@@ -30,10 +30,6 @@
     }
 }
 
-.container-right {
-    padding-left: calc((100% - 1300px) / 2);
-}
-
 .goods-slider {
     max-width: 1380px;
     height: 100%;
@@ -157,6 +153,7 @@
 .swiper-button-next,
 .swiper-button-prev {
    outline: none;
+   display: none;
 }
 
 
@@ -186,7 +183,11 @@ button.swiper-button-next::after {
     height: 21px;
 }
 
-.swiper-button-prev::before {
+button.swiper-button-prev::after {
+    display: none;
+}
+
+button.swiper-button-prev::before {
     content: '';
     background-image: url(/images/slider/arrow-prev.svg);
     position: absolute;

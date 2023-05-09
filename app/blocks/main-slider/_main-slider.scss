@@ -36,6 +36,8 @@ button.swiper-button-next.main-slider__btn--next {
 }
 
 .main-slider {
+	position: relative;
+	
 	&__btn {
 		display: flex;
 		justify-content: center;
