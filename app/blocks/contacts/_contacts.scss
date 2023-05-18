@@ -24,7 +24,9 @@
     }
 
     &__map {
-        max-width: 797px;
+        filter: drop-shadow(0px 14px 20px rgba(0, 0, 0, 0.1));
+        border-radius: 22px 0px 0px 22px;
+        overflow: hidden;
     }
 
     &__info {
@@ -61,3 +63,11 @@
         margin-bottom: 20px;
     }
 }
+
+div.map-geolocation-control{
+    display: none !important;
+}
+
+.ymaps-controls {
+    display: none !important;
+  }

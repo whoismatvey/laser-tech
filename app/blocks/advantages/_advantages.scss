@@ -5,7 +5,7 @@
     }
 
     &__wrapper {
-        padding: 100px 0 80px 0;
+        padding: 0 0 80px 0;
     }
 
     &__title {
@@ -21,14 +21,13 @@
 }
 
 .card {
-    width: 248px;
-    height: 371px;
+    max-width: 248px;
     border: 1px solid rgba(228, 228, 229, 0.5);
     box-shadow: 0px 14px 20px rgba(0, 0, 0, 0.1);
     border-radius: 22px;
 
     &__wrapper {
-        padding: 30px 20px;
+        padding: 30px 21px;
         height: 100%;
     }
 
@@ -45,6 +44,7 @@
     &__link {
         font-size: 14px;
         text-decoration: underline;
+        text-decoration-color: #b01e1e;
         background: linear-gradient(88.01deg, #730000 -9.57%, #FF0000 115.37%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -68,10 +68,11 @@
 
     &__list {
         list-style: decimal;
-        list-style-type: 1;
+        line-height: 22px;
+        margin: 10px 0;
     }
 
     &__list-item {
         font-size: 14px;
-    }
+    } 
 }

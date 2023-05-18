@@ -1,0 +1,227 @@
+.product {
+  &__wrapper {
+    padding: 30px 0 40px 0;
+    
+  }
+
+  &__header {
+    display: flex;
+  }
+
+  &__content {
+    max-width: 640px;
+    margin-left: 23px;
+  }
+
+  &__desc {
+    font-size: 12px;
+    line-height: 15px;
+    margin: 8px 0 15px 0;
+  }
+
+  &__row {
+    display: flex;
+    gap: 28px;
+    margin-bottom: 15px;
+  }
+
+  &__price {
+    margin-bottom: 19px;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+
+  &__question--btn {
+    margin-left: 3px;
+  }
+
+  &__help {
+    margin-top: 4px;
+    font-size: 10px;
+    text-decoration: underline;
+    text-decoration-color: #c30101;
+    background: linear-gradient(88.01deg, #730000 -9.57%, #FF0000 115.37%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+  &__size, &__wish {
+    input {
+      width: 300px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  &__order {
+    padding: 15px 26px;
+  }
+
+  &__cart {
+      padding: 15px 26px;
+  }
+
+  &__footer {
+    display: flex;
+    margin-top: 13px;
+  }
+
+  &__more {
+    max-width: 795px;
+    margin-right: 115px;
+  }
+
+  &__desc--relt {
+    position: relative;
+    margin: 8px 0 0 0;
+  }
+
+  &__white-bc {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    z-index: 4;
+    background: linear-gradient(0deg, #FFFFFF 18.08%, rgba(255, 255, 255, 0.4) 100%);
+  }
+
+  &__read-more {
+    font-size: 12px;
+    text-decoration: underline;
+    text-decoration-color: red;
+    background: linear-gradient(88.01deg, #730000 -9.57%, #FF0000 115.37%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+  &__text-more {
+    display: none;
+  }
+
+  &__more-text--show{
+    display: inline;
+  }
+}
+
+.tag {
+  &__more-btn {
+    margin-top: 5px;
+    font-size: 12px;
+    text-decoration: underline;
+    text-decoration-color: red;
+    background: linear-gradient(88.01deg, #730000 -9.57%, #FF0000 115.37%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+  
+  &__btn {
+    padding: 5px 6px; 
+    background: #FFFFFF;
+    font-size: 12px;
+    box-shadow: 0px 4px 20px rgba(70, 69, 69, 0.1);
+    border-radius: 8px;
+    background: linear-gradient(88.01deg, #730000 -9.57%, #FF0000 115.37%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+  &__content {
+    position: relative;
+    max-width: 290px;
+    margin-top: 8px;
+  }
+
+  &__white-bc {
+    position: absolute;
+    height: 20px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+    background: linear-gradient(0deg, #FFFFFF 18.08%, rgba(255, 255, 255, 0.4) 100%);
+  }
+}
+
+.product-slider {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.product-slider .swiper-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.product-slider__thumbs {
+  height: 588px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  margin-right: 32px;
+}
+
+.product-slider__images {
+  height: 588px;
+  position: relative;
+}
+
+.product-slider__image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 22px;
+}
+.product-slider__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.view-360 {
+  width: 500px;
+}
+
+.product-slider__pagination span.swiper-pagination-bullet  {
+	width: 76px;
+	height: 4px;
+	background: #FFFFFF;
+	border-radius: 100px;
+}
+
+.main-slider__pagination span.swiper-pagination-bullet-active {
+	background: linear-gradient(88.01deg, #730000 -9.57%, #FF0000 115.37%);
+  border-radius: 100px;
+}
+
+.active {
+  display: block;
+}

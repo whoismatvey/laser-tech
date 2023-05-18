@@ -1,0 +1,125 @@
+.gallery {
+    &__header {
+        display: flex;
+        padding: 30px 0 40px 0;
+    }
+
+    &__more-tags {
+      display: block;
+    }
+
+    &__tag {
+        font-size: 14px;
+        padding: 4px 6px;
+        background: #E8E8E8;
+        border-radius: 8px;
+    }
+
+    &__tag--white {
+      background: #fff;
+    }
+
+    &__content {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px 10px;
+      margin-left: 100px;
+    }
+
+    &__more-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px 10px;
+    }
+
+    &__items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: center;
+    }
+
+    &__item-hight {
+      width: 353px;
+      height: 430px;
+      background: #E4E4E5;
+      border-radius: 22px;
+    }
+
+    &__item-long {
+      width: 472px;
+      height: 291px;
+      background: #E4E4E5;
+      border-radius: 22px;
+    }
+
+    &__item-wrapper {
+      height: 100%;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 12px;
+    }
+
+    &__item-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: end;
+      width: 38%;
+      gap: 10px 7px;
+    }
+
+    &__item-price {
+      padding: 4px 6px;
+      font-weight: 600;
+      font-size: 14px;
+      background-color: #FFFFFF;
+      box-shadow: 0px 14px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      border: 1px solid#be1b1b;
+    }
+
+    &__item-btn {
+      cursor: pointer;
+    }
+}
+
+.hidden {
+  display: none;
+}
+
+.tag-active {
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(88.01deg, #730000 -9.57%, #FF0000 115.37%);
+    border-radius: 8px;
+}
+
+.order-popup {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__body {
+    position: relative;
+    padding: 40px;
+    background: #FFFFFF;
+    border-radius: 22px;
+  }
+
+  &__content {
+    margin: 30px 0 20px 0;
+  }
+
+  &__close {
+    position: absolute;
+    top: -60px;
+    right: 0;
+  }
+}

@@ -20,14 +20,14 @@
 
     &__body::before {
         content: '';
-        background-image: url('/images/gratitude/present-men.png');
+        background-image: url('/images/gratitude/men.png');
         background-position: center center;
         background-repeat: no-repeat;
         position: absolute;
-        bottom: 16px;
-        right: 2px;
-        width: 200px;
-        height: 200px;
+        bottom: 30px;
+        right: 34px;
+        width: 307px;
+        height: 270px;
     }
 
     &__title {
@@ -50,15 +50,50 @@
     }
 
     &__btn {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 15px 26px;
-        border-radius: 15px;
-        border: 2px solid red;
+        font-weight: 600;
+        z-index: 2;
+
+        p {
+            background: linear-gradient(88.01deg, #730000 -9.57%, #FF0000 115.37%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
 
         img {
             margin-right: 5px;
         }
+    }
+
+    &__btn::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url('/images/gratitude/border-btn.svg');
+        background-repeat: no-repeat;
+        z-index: -1;
+        width: 204px;
+        height: 50px;
+    }
+
+    &__promo {
+        font-weight: 700;
+        font-size: 18px;
+        margin: 5px 0 30px 0;
+    }
+
+    &__subtitle {
+        margin-top: 36px;
+    }
+
+    &__close {
+        padding: 0px 18px;
     }
 }

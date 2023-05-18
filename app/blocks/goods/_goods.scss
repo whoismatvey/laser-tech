@@ -1,0 +1,139 @@
+.goods {
+    &__container {
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 32px;
+    }
+
+    &__link {
+        font-size: 14px;
+        text-decoration-line: underline;
+    }
+}
+
+.goods-slider {
+    max-width: 1380px;
+    height: 100%;
+    padding-top: 17px;
+    position: relative;
+    color: #000;
+
+    &__body {
+        box-shadow: 0px 14px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 22px;
+        position: relative;
+        height: 350px;
+    }
+
+    &__content {
+        padding: 6px 0 19px 13px; 
+    } 
+
+    &__marquee {
+        max-width: 196px;
+    }
+    
+    &__heading {
+        position: relative;
+        white-space: nowrap;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    &__title {
+        width: 100%;
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    &__title.motu:hover  {
+        animation-play-state: paused;
+    }
+
+    &__title.motu {
+        animation: marquee-tex 7s linear infinite;
+    }
+
+    @keyframes marquee-tex {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(100%);
+        }
+    }
+
+    &__title-bc {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60px;
+        height: 27px;
+        background: linear-gradient(270deg, #FFFFFF 18.75%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    &__wrapper {
+        display: flex;
+    }
+
+
+    &__sale-price {
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    &__price {
+        font-size: 12px;
+        text-decoration-line: line-through;
+        color: #6A6A6A;
+    }
+
+    &__sale {
+        font-size: 12px;
+        background: linear-gradient(88.01deg, #730000 -9.57%, #FF0000 115.37%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        margin: 0 3px 0 5px;
+    }
+
+    &__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #E4E4E5;
+        border-radius: 22px 22px 0 0;
+        height: 268px;
+    }
+}
+
+.new-slider__wrapper {
+    margin-bottom: 115px;
+}
+
+.hit-slider__wrapper {
+    margin-bottom: 130px;
+}
+
+.product-goods__wrapper {
+    margin: 40px 0 115px 0;
+}
+
+.awards-goods__wrapper {
+    margin: 40px 0;
+}
+
+.priorbank-goods__wrapper {
+    margin: 40px 0 115px 0;
+}

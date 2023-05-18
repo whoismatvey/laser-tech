@@ -1,0 +1,29 @@
+.error-404 {
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 67px;
+        margin: 47px 0 23px 0;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 150px;
+        background: linear-gradient(88.01deg, #730000 -9.57%, #FF0000 115.37%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        margin-bottom: 14px;
+    }
+
+    &__desc {
+        font-weight: 700;
+        font-size: 36px;
+    }
+
+    &__content {
+        max-width: 525px;
+    }
+}

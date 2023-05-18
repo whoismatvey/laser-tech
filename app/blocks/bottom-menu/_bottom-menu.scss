@@ -1,11 +1,11 @@
-.bottom-menu {
+.menu {
     &__container {
         max-width: 1300px;
         margin: 0 auto;
     }
 
     &__wrapper {
-        padding-bottom: 115px;
+        padding-bottom: 80px;
     }
 
     &__items {
@@ -21,7 +21,14 @@
     }
 
     &__img {
+        position: relative;
         margin-bottom: 20px;
+    }
+
+    &__border {
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 
     &__title {
@@ -29,3 +36,6 @@
         font-size: 14px;
     }
 }
+
+
+

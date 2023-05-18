@@ -1,19 +1,26 @@
-.preview {
-	&__wrapper {
-		padding-bottom: 63px;
-	}
+.main-slider {
+	overflow: hidden;
+    margin: 0 auto;
+    width: 1519px;
 }
 
 div.main-slider__slide {
 	width: auto;
 }
 
+.main-slider__pagination  {
+	display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
 .main-slider__pagination span.swiper-pagination-bullet  {
 	width: 131px;
 	height: 4px;
-	background: rgba(255, 255, 255, 0.3);
+	background: rgba(255, 255, 255, 0.5);
 	backdrop-filter: blur(15px);
 	border-radius: 100px;
+	opacity: 1;
 }
 
 .main-slider__pagination span.swiper-pagination-bullet-active {

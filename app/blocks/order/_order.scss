@@ -1,0 +1,254 @@
+.order {
+    &__wrapper {
+        margin: 30px 0 40px 0;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        max-width: 1300px;
+        background: #FFFFFF;
+        box-shadow: 0px 14px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 50px;
+    }
+    
+}
+
+.order-form {
+    &__title {
+        font-weight: 600;
+        font-size: 24px;
+    }
+
+
+    &__group input {
+        width: 300px;
+        font-weight: 400;
+    }
+
+    &__heading {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        font-size: 18px;
+        gap: 4px;
+        margin-bottom: 4px;
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__main {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+        padding-bottom: 15px;
+    }
+
+    &__main::after {
+        content: '';
+        position: absolute;
+        height: 430px;
+        left: 364px;
+        width: 1px;
+        background-color: #E4E4E5;
+    }
+
+    &__main::before {
+        content: '';
+        position: absolute;
+        height: 410px;
+        right: 409px;
+        width: 1px;
+        background-color: #E4E4E5;
+    }
+
+
+    &__tel-checkbox {
+        display: flex;
+        gap: 15px;
+        margin-top: 6px;
+    }
+
+    &__footer {
+        position: relative;
+        padding-top: 25px;
+        border-top: 1px solid #E4E4E5;
+    }
+
+    &__price {
+        display: flex;
+        align-items: flex-start;
+        gap: 4px;
+        font-weight: 600;
+        font-size: 24px;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        margin-top: 15px;
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+
+    &__requisites {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 20px;
+        background: #E8E8E8;
+        border-radius: 14px;
+        font-weight: 400;
+        font-size: 12px;        
+        color: #323232;
+        line-height: 15px;
+
+        input {
+            background: #E8E8E8;
+        }
+
+        textarea {
+            background: #E8E8E8;
+            color: #323232;
+        }
+    }
+
+    &__required {
+        font-size: 14px; 
+        color: #6A6A6A;
+        text-align: right;
+        margin-bottom: 25px;
+    }
+
+    &__send {
+        padding: 15px 26px;
+    }
+
+    &__heading--bm15 {
+        margin-bottom: 15px;
+    }
+
+    &__delivery-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 19px;
+        max-width: 366px;
+    }
+
+    &__position-name {
+        display: none;
+        z-index: 4;
+        position: absolute;
+        left: 127px;
+        top: 4px;
+    }
+
+    &__position-num {
+        display: none;
+        z-index: 4;
+        position: absolute;
+        left: 314px;
+        top: 95px;
+    }
+
+    &__position-select {
+        display: none;
+        z-index: 4;
+        position: absolute;
+        left: 332px;
+        bottom: 25px;
+    }
+
+    &__position-delivery {
+        display: none;
+        z-index: 4;
+        position: absolute;
+        right: 305px;
+        top: 57px;
+    }
+
+    &__total::before {
+        content: '';
+        position: absolute;
+        left: 250px;
+        bottom: 0;
+        height: 105px;
+        width: 1px;
+        background-color: #E4E4E5;
+    }
+
+    &__sale::before {
+        content: '';
+        position: absolute;
+        left: 488px;
+        bottom: 0;
+        height: 105px;
+        width: 1px;
+        background-color: #E4E4E5;
+    }
+
+    &__free::before {
+        content: '';
+        position: absolute;
+        left: 704px;
+        bottom: 0;
+        height: 105px;
+        width: 1px;
+        background-color: #E4E4E5;
+    }
+
+    &__position-requisites {
+        display: none;
+        z-index: 4;
+        position: absolute;
+        right: -40px;
+        top: 202px;
+    }
+
+    &__position-pay {
+        display: none;
+        z-index: 4;
+        position: absolute;
+        right: -122px;
+        top: 57px;
+    }
+
+    &__name-img:hover ~ &__position-name{
+        display: block;
+    }
+
+    &__num-img:hover ~ &__position-num{
+        display: block;
+    }
+
+    &__select-img:hover ~ &__position-select {
+        display: block;
+    }
+    
+    &__delivery-img:hover ~ &__position-delivery {
+        display: block;
+    }
+
+    &__requisites-img:hover ~ &__position-requisites {
+        display: block;
+    }
+
+    &__pay-img:hover ~ &__position-pay {
+        display: block;
+    }
+}
+
+
+/*
+
+*/
