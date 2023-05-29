@@ -69,10 +69,16 @@ const mainSlider = new Swiper('.main-slider', {
     speed: 1000,
 
     breakpoints: {
-      451: {
+      200: {
         navigation: {
           nextEl: null, // Убираем следующую стрелку
           prevEl: null, // Убираем предыдущую стрелку
+        },
+      },
+      899: {
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
         },
       }
     }

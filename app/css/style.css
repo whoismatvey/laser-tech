@@ -1163,13 +1163,44 @@ div.main-slider__slide {
 }
 
 .main-slider__pagination span.swiper-pagination-bullet-active {
+  position: relative;
   width: 131px;
   height: 4px;
-  background: #FFFFFF;
+  background: rgba(255, 255, 255, 0.5);
   border-radius: 100px;
   opacity: 1;
 }
 
+span.swiper-pagination-bullet-active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  border-radius: 100px;
+  background-color: white;
+  -webkit-animation: fillAnimation 6s linear forwards;
+          animation: fillAnimation 6s linear forwards;
+}
+
+@-webkit-keyframes fillAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes fillAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
 button.swiper-pagination.main-slider__pagination.swiper-pagination-bullets {
   bottom: 18px;
 }
@@ -1459,7 +1490,7 @@ button.swiper-button-next.main-slider__btn--next {
   transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
 }
 
-div.goods__slide:hover {
+.goods__slide:hover {
   -webkit-transform: scale(1.01);
       -ms-transform: scale(1.01);
           transform: scale(1.01);
@@ -1477,10 +1508,6 @@ div.goods__slide:hover {
 .goods-slider__body {
   position: relative;
   height: 350px;
-}
-.goods-slider__body:hover {
-  -webkit-box-shadow: none;
-          box-shadow: none;
 }
 .goods-slider__content {
   padding: 6px 0 19px 13px;
@@ -1685,6 +1712,9 @@ div.goods__slide:hover {
       -ms-flex-align: center;
           align-items: center;
 }
+.example__footer {
+  width: 100%;
+}
 .example__title {
   font-weight: 700;
   font-size: 48px;
@@ -1696,22 +1726,6 @@ div.goods__slide:hover {
   font-size: 24px;
   color: #363636;
   text-transform: uppercase;
-}
-.example__btn {
-  position: relative;
-  font-weight: 600;
-  padding: 15px 19px;
-}
-.example__btn::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: url("/images/custom/btn-bc.svg");
-  background-repeat: no-repeat;
-  z-index: -1;
-  width: 204px;
-  height: 50px;
 }
 .example__grid {
   display: -ms-grid;
@@ -1738,9 +1752,6 @@ div.goods__slide:hover {
 .example__header {
   width: 100%;
   text-align: left;
-}
-.example__footer {
-  margin-top: 30px;
 }
 .example__item--1 {
   -ms-grid-column: 1;
@@ -1899,6 +1910,39 @@ button.swiper-button-next.example__btn-next--2 {
   -webkit-transition: opacity 0.5s ease-in-out;
   -o-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out; /* Плавность анимации */
+}
+
+.btn {
+  background-image: -o-linear-gradient(1.99deg, #730000 -9.57%, #FF0000 115.37%);
+  background-image: linear-gradient(88.01deg, #730000 -9.57%, #FF0000 115.37%);
+  border-radius: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  font-size: 16px; /*18*/
+  height: 50px;
+  margin: 0 auto;
+  padding: 2px;
+  position: relative;
+  font-weight: 600;
+  width: 99%;
+  z-index: 2;
+}
+
+.btn span {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ffffff;
+  border-radius: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 100%;
 }
 
 @media (max-width: 899px) {
@@ -4347,7 +4391,7 @@ div.swiper-wrapper {
   height: 556px;
 }
 
-.product-slider__thumbs .swiper-slide-thumb-active .product-slider__image {
+.product-slider__thumbs .swiper-slide-thumb-active .product-slider__image-thumbs {
   opacity: 1;
   border: 2px solid #c40000;
   border-radius: 22px;
@@ -4360,11 +4404,12 @@ div.swiper-wrapper {
   width: 457px;
 }
 
-.product-slider__image {
+.product-slider__image-thumbs {
   width: 100%;
-  height: 100%;
+  max-height: 100%;
   background: #E4E4E5;
   border-radius: 22px;
+  overflow: hidden;
 }
 
 .product-slider__image img {
@@ -4372,8 +4417,6 @@ div.swiper-wrapper {
   display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
 }
 
 @media (max-width: 767.98px) {

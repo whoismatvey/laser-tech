@@ -30,12 +30,34 @@ div.main-slider__slide {
 }
 
 .main-slider__pagination span.swiper-pagination-bullet-active {
+	position: relative;
 	width: 131px;
 	height: 4px;
-	background: #FFFFFF;
+	background: rgba(255, 255, 255, 0.5);
 	border-radius: 100px;
 	opacity: 1;
 }
+
+span.swiper-pagination-bullet-active::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 4px;
+	border-radius: 100px;
+	background-color: white;
+	animation: fillAnimation 6s linear forwards;
+}
+
+@keyframes fillAnimation {
+	0% {
+	  width: 0;
+	}
+	100% {
+	  width: 100%;
+	}
+  }
 
 button.swiper-pagination.main-slider__pagination.swiper-pagination-bullets {
 	bottom: 18px;

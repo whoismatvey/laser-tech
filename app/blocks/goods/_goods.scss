@@ -39,10 +39,11 @@
     }
 }
 
-div.goods__slide:hover {
+.goods__slide:hover {
     transform: scale(1.01);
     box-shadow: 0px 14px 20px rgba(0, 0, 0, 0.15);
 }
+
 
 .goods-slider {
     max-width: 1380px;
@@ -54,10 +55,6 @@ div.goods__slide:hover {
     &__body {
         position: relative;
         height: 350px;
-    }
-
-    &__body:hover {
-        box-shadow: none;
     }
 
     &__content {
