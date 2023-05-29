@@ -5,7 +5,7 @@
               <div class="gallery__title title">ГАЛЕРЕЯ</div>
               <div class="gallery__tags">
                   <div class="gallery__content">
-                      <button class="gallery__tag tag-active">Все</button>
+                      <button class="gallery__tag gallery__tag--all tag-active">Все</button>
                       <button class="gallery__tag">Теги</button>
                       <button class="gallery__tag">Награды</button>
                       <button class="gallery__tag">Медали</button>
@@ -31,31 +31,31 @@
                       <button class="gallery__tag">Спорт</button>
                       <button class="gallery__tag">Банки</button>
                       <button class="gallery__tag">БелАЗ</button>
-                      <button class="gallery__tag">2020</button>
-                      <div class="gallery__more-tags hidden">
-                          <button class="gallery__tag">Буквы</button>
-                          <button class="gallery__tag">Банки</button>
-                          <button class="gallery__tag">БелАЗ</button>
-                          <button class="gallery__tag">Приорбанк</button>
-                          <button class="gallery__tag">Плавание</button>
-                          <button class="gallery__tag">2022</button>
-                          <button class="gallery__tag">Спорт</button>
-                          <button class="gallery__tag">Теннис</button>
-                          <button class="gallery__tag">Плавание</button>
-                          <button class="gallery__tag">Теги</button>
-                          <button class="gallery__tag">Приорбанк</button>
-                          <button class="gallery__tag">Медали</button>
-                          <button class="gallery__tag">2019</button>
-                          <button class="gallery__tag">Спорт</button>
-                          <button class="gallery__tag">Буквы</button>
-                          <button class="gallery__tag">МТС</button>
-                          <button class="gallery__tag">Спорт</button>
-                          <button class="gallery__tag">Банки</button>
-                          <button class="gallery__tag">БелАЗ</button>
-                          <button class="gallery__tag">2020</button>
-                      </div>
+                      <div class="gallery__more-tags">
+                        <button class="gallery__tag">Буквы</button>
+                        <button class="gallery__tag">Банки</button>
+                        <button class="gallery__tag">БелАЗ</button>
+                        <button class="gallery__tag">Приорбанк</button>
+                        <button class="gallery__tag">Плавание</button>
+                        <button class="gallery__tag">2022</button>
+                        <button class="gallery__tag">Спорт</button>
+                        <button class="gallery__tag">Теннис</button>
+                        <button class="gallery__tag">Плавание</button>
+                        <button class="gallery__tag">Теги</button>
+                        <button class="gallery__tag">Приорбанк</button>
+                        <button class="gallery__tag">Медали</button>
+                        <button class="gallery__tag">2019</button>
+                        <button class="gallery__tag">Спорт</button>
+                        <button class="gallery__tag">Буквы</button>
+                        <button class="gallery__tag">МТС</button>
+                        <button class="gallery__tag">Спорт</button>
+                        <button class="gallery__tag">Банки</button>
+                        <button class="gallery__tag">БелАЗ</button>
+                        <button class="gallery__tag">2020</button>
+                    </div>
                   </div>
                   <button class="more-btn more-btn__tags">Больше тегов</button>
+                  <button class="more-btn more-btn__close hidden">Закрыть</button>
               </div>
           </div>
       </div>
@@ -93,64 +93,80 @@
 
 
 <div class="order-popup hidden">
-<div class="overlay">
     <div class="order-popup__wrapper">
         <div class="order-popup__body">
           <div class="product__header">
-            <div class="product-slider">
-              <div class="product-slider__thumbs">
-                <div class="swiper-container"> <!-- Слайдер с превью -->
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="product-slider__image view-360__bc"><img src="/images/product/product.png" alt=""/></div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="product-slider__image"><img src="/images/product/product.png" alt=""/></div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="product-slider__image"><img src="/images/product/product.png" alt=""/></div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="product-slider__image"><img src="/images/product/product.png" alt=""/></div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="product-slider__image"><img src="/images/product/product.png" alt=""/></div>
-                    </div>
-                  </div>
-                  <button class="product-slider__btn-thumb--next"></button>
-                  <button class="product-slider__btn-thumb--prev"></button>
-                </div>
-              </div>
-              <div class="product-slider__images">
-                  <div class="swiper-container"> <!-- Слайдер с изображениями -->
+            <section class="product-slider">
+              <div class="product-slider__flex">
+                <div class="product-slider__col">
+            
+                  <div class="product-slider__prev product-slider__btn-thumb--prev"></div> <!-- Кнопка для переключения на предыдущий слайд -->
+            
+                  <div class="product-slider__thumbs">
+                    <div class="swiper-container"> <!-- Слайдер с превью -->
                       <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class="product-slider__image">
-                                <div class="product-slider__3dmodel">
-                                    <div class="view-360"></div>
-                                </div>
-                            </div>
+                          <div class="product-slider__image"><img src="/images/all-product/VTB.png" alt=""/></div>
                         </div>
                         <div class="swiper-slide">
-                          <div class="product-slider__image"><img src="/images/product/product-big.png" alt=""/></div>
+                          <div class="product-slider__image"><img src="/images/all-product/VTB.png" alt=""/></div>
                         </div>
                         <div class="swiper-slide">
-                          <div class="product-slider__image"><img src="/images/product/product-big.png" alt=""/></div>
+                          <div class="product-slider__image"><img src="/images/all-product/VTB.png" alt=""/></div>
                         </div>
                         <div class="swiper-slide">
-                          <div class="product-slider__image"><img src="/images/product/product-big.png" alt=""/></div>
+                          <div class="product-slider__image"><img src="/images/all-product/VTB.png" alt=""/></div>
                         </div>
                         <div class="swiper-slide">
-                          <div class="product-slider__image"><img src="/images/product/product-big.png" alt=""/></div>
+                          <div class="product-slider__image"><img src="/images/all-product/VTB.png" alt=""/></div>
                         </div>
                       </div>
-                      <button class="swiper-pagination product-slider__pagination"></button>
-                      <button class="product-slider__btn-main--next"></button>
+                    </div>
                   </div>
+            
+                  <div class="product-slider__next product-slider__btn-thumb--next"></div> <!-- Кнопка для переключения на следующий слайд -->
+            
+                </div>
+            
+                <div class="product-slider__images">
+                  <div class="swiper-container"> <!-- Слайдер с изображениями -->
+                    <div class="swiper-wrapper">
+                     <div class="swiper-slide">
+                      <div class="product-slider__image myImg">
+                        <img src="/images/product/product-big.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="product-slider__image myImg">
+                        <img src="/images/product/product-big.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="product-slider__image myImg">
+                        <img src="/images/product/product-big.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="product-slider__image myImg">
+                        <img src="/images/product/product-big.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="product-slider__image myImg">
+                        <img src="/images/product/product-big.png" alt="" />
+                      </div>
+                    </div>
+    
+                    </div>
+                  </div>
+                  <div class="product-slider__prev product-slider__btn-main--prev"></div>
+                  <div class="product-slider__next product-slider__btn-main--next"></div>
+                </div>
+                
               </div>
-            </div>
+            </section>
             <div class="product__content">
-              <h3 class="title">НАЗВАНИЕ ПРОДУКТА</h3>
+              <a class="subtitle" href="/product.html">НАЗВАНИЕ ПРОДУКТА<img src="/images/icons/link-icon.svg" alt=""></a>
               <div class="product__desc">
                 Краткое описание а-ля характеристик и материалов конкретной награды указать, что цена за указана за определённый размер и,
                 например, только с учётом заказа в определённом количестве. Краткое описание краткое описание краткое описание краткое 
@@ -163,7 +179,9 @@
                   <div class="price__sale">
                     <p class="price__cost">от 507.00 BYN</p>
                     <p class="price__percent">-18%</p>
-                    <img src="/images/cart/sale.svg" alt="sale">
+                    <div class="sale-tooltip">
+                      <img src="/images/cart/sale.svg" alt="sale">
+                    </div>
                   </div>
                 </div>
                 <div class="product__icons">
@@ -191,17 +209,17 @@
                   <div class="product__wish">
                     <div class="product__title">
                       <p>Ваши пожелания</p> 
-                      <div class="product__question" data-qustion="Краткая подсказка: например, по цене: ещё раз повторить, что она не окончательная">
+                      <div class="question-grey">
                         <img src="/images/product/question.svg" alt="question">
                       </div>
                     </div>
-                    <input type="text" placeholder="Введите здесь" class="input-text">
-                    <div class="product__help"><a href="#">Нету текста для награды?</a></div>
+                    <textarea class="input-text product__wish--textarea" placeholder="Введите здесь"></textarea>
+                    <div class="product__help"><a href="/text-example.html">Нету текста для награды?</a></div>
                   </div>
                   <div class="input-date">
                     <div class="product__title">
-                      <p>Крайний срок</p> 
-                      <div class="product__question" data-qustion="Краткая подсказка: например, по цене: ещё раз повторить, что она не окончательная">
+                      <p>Крайний срок готовности</p> 
+                      <div class="question-grey">
                         <img src="/images/product/question.svg" alt="question">
                       </div>
                     </div>
@@ -212,38 +230,35 @@
                 <div class="product__row">
                   <div class="product__size">
                     <div class="product__title">
-                      <p>Ваши пожелания</p> 
-                      <div class="product__question" data-qustion="Краткая подсказка: например, по цене: ещё раз повторить, что она не окончательная">
+                      <p>Ориентировочные размеры</p> 
+                      <div class="question-grey">
                         <img src="/images/product/question.svg" alt="question">
                       </div>
                     </div>
                     <input type="text" placeholder="Введите здесь" class="input-text">
-                    <div class="product__help"><a href="#">Нету текста для награды?</a></div>
                   </div>
                   <div class="counter">
-                    <div class="product__title">Количество</div>
+                     <div class="product__title">Количество</div>
                     <div class="counter__wrapper">
-                        <button class="counter__btn--plus" onclick="stepper(this)"><img src="/images/cart/minus.svg" alt="minus"></button>
-                        <input type="number" min="0" max="100" step="1" value="1" class="counter__input" readonly>
-                        <button class="counter__btn--minus" id="counter-increment" onclick="stepper(this)"><img src="/images/cart/plus.svg" alt="plus"></button>
+                        <div class="counter__btn--minus" onclick="stepper(this)"><img src="/images/cart/minus.svg" class="disabled-minus disabled" alt="minus" draggable="false"></div>
+                        <input type="number" min="1" max="9999" step="1" value="1" class="counter__input">
+                        <div class="counter__btn--plus" onclick="stepper(this)"><img src="/images/cart/plus.svg" alt="plus" draggable="false"></div>
                     </div>
-                  </div>
+                </div>
                 </div>
                 
                 <div class="product__select">
                   <div class="product__title">
                     <p>Дополнительные опции</p> 
-                    <div class="product__question" data-qustion="Краткая подсказка: например, по цене: ещё раз повторить, что она не окончательная">
+                    <div class="question-grey">
                       <img src="/images/product/question.svg" alt="question">
                     </div>
                   </div>
                   <select class="select">
-                      <option>Choose Your Coffee</option>
-                      <option>Cappuccino</option>
-                      <option>Espresso</option>
-                      <option>Latte</option>
-                      <option>Mocha</option>
-                      <option>Frappe</option>
+                      <option>Выберите</option>
+                      <option>Дополнительная опция 1</option>
+                      <option>Дополнительная опция 2</option>
+                      <option>Дополнительная опция 3</option>
                   </select>
                 </div>
       
@@ -254,15 +269,12 @@
               </form>
             </div>
           </div>
-            <button class="order-popup__close"><img src="/images/cart/close.svg" alt="close"></button>
-        </div>
-        <div class="question-tooltip">
-
+          <button class="order-popup__close"><img src="/images/cart/close.svg" alt="close"></button>
         </div>
     </div>
 </div>
-</div>
        
+<div class="overlay hidden"></div>
 
                 
                     

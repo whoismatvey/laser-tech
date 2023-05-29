@@ -39,4 +39,12 @@
         font-size: 14px;
         line-height: 143%;
     }
+
+}
+@media(max-width: 899px) {
+    .offer {
+        &__wrapper {
+            padding: 15px 0 40px 0;
+        }
+    }
 }

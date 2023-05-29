@@ -2,7 +2,7 @@
     <div class="container">
         <div class="order__wrapper">
             <div class="order__header">
-                <h3 class="title">ОФОРМЛЕНИЕ ЗАКАЗА</h3>
+                <h3 class="subtitle">ОФОРМЛЕНИЕ ЗАКАЗА</h3>
             </div>
             <form action="" class="order-form">
                 <div class="order-form__main">
@@ -12,20 +12,20 @@
                             <div class="order-form__group">
                                 <div class="product__title">
                                     <h4>Ваше имя<span class="red-text">*</span></h4>
-                                    <div class="product__question" data-qustion="Краткая подсказка: например, по цене: ещё раз повторить, что она не окончательная">
-                                      <img src="/images/product/question.svg" alt="question">
+                                    <div class="question-grey">
+                                        <img src="/images/product/question.svg" alt="question">
                                     </div>
                                   </div>
-                                <input type="text" placeholder="Иванов Иван" class="input-text" required>
+                                <input type="text" placeholder="Иванов Иван" class="input-text" onkeypress="validateInput(event)" required>
                             </div>
                             <div class="order-form__group">
                                 <div class="product__title">
                                     <h4>Контактный номер телефона<span class="red-text">*</span></h4>
-                                    <div class="product__question" data-qustion="Краткая подсказка: например, по цене: ещё раз повторить, что она не окончательная">
-                                      <img src="/images/product/question.svg" alt="question">
+                                    <div class="question-grey">
+                                        <img src="/images/product/question.svg" alt="question">
                                     </div>
                                   </div>
-                                <input type="tel" placeholder="+375 (12) 34-56-789" class="input-text" required>
+                                <input type="text" placeholder="+375 (12) 34-56-789" onkeypress="validateInputTel(event)" class="input-text" required>
                                 <div class="order-form__tel-checkbox choose">
                                     <input type="checkbox" id="checkbox1">
                                     <label for="checkbox1">Viber</label>
@@ -36,8 +36,8 @@
                             <div class="order-form__group">
                                 <div class="product__title">
                                     <h4>Контактный email<span class="red-text">*</span></h4>
-                                    <div class="product__question" data-qustion="Краткая подсказка: например, по цене: ещё раз повторить, что она не окончательная">
-                                      <img src="/images/product/question.svg" alt="question">
+                                    <div class="question-grey">
+                                        <img src="/images/product/question.svg" alt="question">
                                     </div>
                                   </div>
                                 <input type="email" placeholder="example@email.com" class="input-text" required>
@@ -45,8 +45,8 @@
                             <div class="order-form__group">
                                 <div class="product__title">
                                     <h4>Как Вам удобнее вести диалог?</h4>
-                                    <div class="product__question" data-qustion="Краткая подсказка: например, по цене: ещё раз повторить, что она не окончательная">
-                                      <img src="/images/product/question.svg" alt="question">
+                                    <div class="question-grey">
+                                        <img src="/images/product/question.svg" alt="question">
                                     </div>
                                   </div>
                                 <select class="select">
@@ -62,30 +62,30 @@
                         </div> 
                     </div>
                     <div class="order-form__col">
-                        <h4 class="order-form__title red-text order-form__heading--bm15">Доставка</h4>
+                        <h4 class="order-form__title red-text">Доставка</h4>
                         <div class="order-form__group">
-                            <div class="product__title">
+                            <div class="product__title order-form__heading--bm15">
                                 <h4>Выберите способ доставки<span class="red-text">*</span></h4>
-                                <div class="product__question" data-qustion="Краткая подсказка: например, по цене: ещё раз повторить, что она не окончательная">
-                                  <img src="/images/product/question.svg" alt="question">
+                                <div class="question-grey">
+                                    <img src="/images/product/question.svg" alt="question">
                                 </div>
                               </div>
-                            <div class="order-form__delivery choose">
+                            <div class="order-form__delivery radio">
                                 <div class="order-form__delivery-wrapper">
-                                    <input type="checkbox" id="checkbox3">
-                                    <label for="checkbox3">Самовывоз в Минске с ул. В. Хоружей, 31А (пн.-чт.: 9:00 - 18:00; пт.: 9:00 - 17:00)</label>
-                                    <input type="checkbox" id="checkbox4">
-                                    <label for="checkbox4">
+                                    <input type="radio" id="radio3" name="delivery" value="pickup">
+                                    <label for="radio3">Самовывоз в Минске с ул. В. Хоружей, 31А (пн.-чт.: 9:00 - 18:00; пт.: 9:00 - 17:00)</label>
+                                    <input type="radio" id="radio4" name="delivery" value="courier">
+                                    <label for="radio4">
                                         Доставка нашим курьером по Минску
                                         <p class="red-text">Бесплатно!</p>
                                     </label>
-                                    <input type="checkbox" id="checkbox5">
-                                    <label for="checkbox5">
+                                    <input type="radio" id="radio5" name="delivery" value="belpost">
+                                    <label for="radio5">
                                         Белпочтой по Беларуси
                                         <p class="gray-text">Рассчитывается индивидуально</p> 
                                     </label>
-                                    <input type="checkbox" id="checkbox6">
-                                    <label for="checkbox6">
+                                    <input type="radio" id="radio6" name="delivery" value="other">
+                                    <label for="radio6">
                                         Другой способ (сторонними перевозчиками или за пределы Беларуси) 
                                         <p class="gray-text">Рассчитывается индивидуально</p> 
                                     </label>
@@ -98,24 +98,24 @@
                         <div class="order-form__group">
                             <div class="product__title order-form__heading--bm15">
                                 <h4>Выберите способ оплаты<span class="red-text">*</span></h4>
-                                <div class="product__question" data-qustion="Краткая подсказка: например, по цене: ещё раз повторить, что она не окончательная">
-                                  <img src="/images/product/question.svg" alt="question">
+                                <div class="question-grey">
+                                    <img src="/images/product/question.svg" alt="question">
                                 </div>
                               </div>
-                            <div class="order-form__delivery choose">
+                            <div class="order-form__delivery radio">
                                 <div class="order-form__delivery-wrapper">
-                                    <input type="checkbox" id="checkbox7">
-                                    <label for="checkbox7">Безналичный расчёт для юр. лиц</label>
-                                    <input type="checkbox" id="checkbox8">
-                                    <label for="checkbox8">Наличными/картой</label>
+                                    <input type="radio" id="radio7" name="delivery" value="belpost">
+                                    <label for="radio7">Безналичный расчёт для юр. лиц</label>
+                                    <input type="radio" id="radio8" name="delivery" value="other">
+                                    <label for="radio8">Наличными/картой</label>
                                 </div>
                             </div>
                         </div>
-                        <div class="order-form__group">
-                            <div class="product__title">
+                        <div class="order-form__group order-form__group-requisites">
+                            <div class="product__title order-form__heading--bm15">
                                 <h4>Ваши реквизиты<span class="red-text">*</span></h4> 
-                                <div class="product__question" data-qustion="Краткая подсказка: например, по цене: ещё раз повторить, что она не окончательная">
-                                  <img src="/images/product/question.svg" alt="question">
+                                <div class="question-grey">
+                                    <img src="/images/product/question.svg" alt="question">
                                 </div>
                               </div>
                             <div class="order-form__requisites">
@@ -131,13 +131,15 @@
                 </div>
                 <div class="order-form__required"><span class="red-text">*</span> - обязательные поля</div>
                 <div class="order-form__footer">
-                    <h3 class="title">ИТОГО:</h3>
+                    <h3 class="subtitle">ИТОГО:</h3>
                     <div class="order-form__row">
                         <div class="order-form__total">
                             <p class="order-form__goods">2 товара на сумму</p>
                             <div class="order-form__price">
                                 <h5>от 506.00 BYN</h5>
-                                <img src="/images/order/red-question.svg" alt="question">
+                                <div class="question-red">
+                                    <img src="/images/icons/red-qustion.svg" alt="question">
+                                </div>
                             </div>
                         </div>
                         <div class="order-form__body order-form__sale">
@@ -148,17 +150,14 @@
                             <p class="order-form__text">Доставка</p>
                             <p class="red-text">Бесплатно</p>
                         </div>
-                        <div class="order-form__body">
-                            <p class="order-form__text order-form__promo">Скидочный купон</p>
+                        <div class="order-form__body order-form__promo">
+                            <p class="order-form__text">Скидочный купон</p>
                             <p class="red-text">-50.00 BYN</p>
                         </div>
                         <button class="order-form__send red-btn">Оформить заказ</button>
                     </div>
                 </div>
             </form>
-        </div>
-        <div class="question-tooltip">
-
         </div>
     </div>
 </div>

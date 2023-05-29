@@ -1,7 +1,8 @@
 .goods {
     &__container {
-        max-width: 1300px;
+        max-width: 1330px;
         margin: 0 auto;
+        padding: 0 15px;
     }
 
     &__header {
@@ -19,6 +20,28 @@
         font-size: 14px;
         text-decoration-line: underline;
     }
+
+    &__link-abst {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    &__slide {
+        will-change: transform; 
+        background-color: #fff;
+        box-shadow: 0px 14px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 22px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+}
+
+div.goods__slide:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 14px 20px rgba(0, 0, 0, 0.15);
 }
 
 .goods-slider {
@@ -29,10 +52,12 @@
     color: #000;
 
     &__body {
-        box-shadow: 0px 14px 20px rgba(0, 0, 0, 0.1);
-        border-radius: 22px;
         position: relative;
         height: 350px;
+    }
+
+    &__body:hover {
+        box-shadow: none;
     }
 
     &__content {
@@ -42,13 +67,6 @@
     &__marquee {
         max-width: 196px;
     }
-    
-    &__heading {
-        position: relative;
-        white-space: nowrap;
-        width: 100%;
-        overflow: hidden;
-    }
 
     &__title {
         width: 100%;
@@ -56,30 +74,22 @@
         font-size: 18px;
     }
 
-    &__title.motu:hover  {
-        animation-play-state: paused;
-    }
-
-    &__title.motu {
-        animation: marquee-tex 7s linear infinite;
-    }
-
-    @keyframes marquee-tex {
-        0% {
-            transform: translateX(-100%);
-        }
-        100% {
-            transform: translateX(100%);
-        }
-    }
-
     &__title-bc {
         position: absolute;
         top: 0;
         right: 0;
+    }
+
+    &__heading::before {
+        content: '';
+        position: absolute;
+        display: block;
+        right: 0;
+        top: 0;
         width: 60px;
         height: 27px;
         background: linear-gradient(270deg, #FFFFFF 18.75%, rgba(255, 255, 255, 0) 100%);
+        z-index: 9;
     }
 
     &__wrapper {
@@ -137,3 +147,96 @@
 .priorbank-goods__wrapper {
     margin: 40px 0 115px 0;
 }
+
+.goods__link-abst:hover .goods-slider__body {
+    box-shadow: none;
+}
+
+.goods-slider__heading{
+    --transparency-width: 30px;
+    --title-width: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+  .goods-slider__title {
+    width: -webkit-max-content; /* Для поддержки старых браузеров */
+    width: max-content;
+    animation: movingTitleText infinite 6s alternate ease-in-out running;
+  }
+  
+  @keyframes movingTitleText {
+    0%, 20% {
+      transform: translate(0px);
+    }
+  
+    40%, 60% {
+      transform: translate(calc(-100% + var(--title-width) - var(--transparency-width) * 2));
+    }
+  
+    80%, 100% {
+      transform: translate(0px);
+    }
+  }
+
+  @media(max-width: 899px) {
+    .goods {
+        &__slide {
+            border-radius: 15px;
+        }
+
+        &__title {
+            font-size: 30px;
+        }
+
+        &__header {
+            align-items: center;
+        }
+    }
+
+    .new-slider__wrapper, .hit-slider__wrapper {
+        margin-bottom: 20px;
+    }
+
+    .goods-slider {
+        &__img {
+            height: auto;
+            border-radius: 15px 15px 0 0;
+        }
+
+        &__body {
+            height: auto;
+        }
+
+        &__content {
+            padding: 4px 8px 12px 8px;
+        }
+
+        &__title {
+            font-size: 12px;
+            margin-bottom: 2px;
+        }
+
+        &__price, &__sale, &__sale-price {
+            font-size: 9px;
+        }
+
+        &__sale {
+            margin-left: 3px;
+        }
+
+        &__heading {
+            --title-width: 136px;
+            --transparency-width: 10px;
+        }
+
+        &__wrapper {
+            align-items: center;
+            img {
+                width: 10px;
+                height: 10px;
+            }
+        }
+    }
+  }

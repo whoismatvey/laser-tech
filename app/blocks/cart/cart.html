@@ -1,11 +1,12 @@
 <div class="cart">
-    <div class="container">
+    <div class="container flex-container">
         <div class="cart__wrapper">
-            <div class="cart__items">
-                <div class="cart-item">
+            <div class="cart__col">
+                <div class="cart__items">
+                    <div class="cart-item">
                     <div class="cart-item__wrapper">
                         <div class="cart-item__checkbox choose">
-                            <input type="checkbox" id="checkbox8">
+                            <input type="checkbox" id="checkbox8" checked>
                             <label for="checkbox8"></label>
                         </div>
                         <div class="cart-item__img">
@@ -13,7 +14,7 @@
                         </div>
                         <div class="cart-item__content">
                             <div class="cart-item__heading">
-                                <h4 class="cart-item__title">НАЗВАНИЕ ПРОДУКТА</h4>
+                                <h4 class="cart-item__title"><a href="/product.html" target="_blank">НАЗВАНИЕ ПРОДУКТА</a></h4>
                                 <div class="cart-item__title-bc"></div>
                             </div>
                             <div class="cart-item__desc">
@@ -32,36 +33,38 @@
                             </div>
                         </div>
                         <div class="cart-item__details">
+                        
                             <div class="counter">
                                 <div class="counter__wrapper">
-                                    <button class="counter__btn--plus" onclick="stepper(this)"><img src="/images/cart/minus.svg" alt="minus"></button>
-                                    <input type="number" min="0" max="100" step="1" value="1" class="counter__input" readonly>
-                                    <button class="counter__btn--minus" id="counter-increment" onclick="stepper(this)"><img src="/images/cart/plus.svg" alt="plus"></button>
+                                    <div class="counter__btn--minus" onclick="stepper(this)"><img src="/images/cart/minus.svg" class="disabled-minus disabled" alt="minus" draggable="false"></div>
+                                    <input type="number" min="1" max="9999" step="1" value="1" class="counter__input">
+                                    <div class="counter__btn--plus" onclick="stepper(this)"><img src="/images/cart/plus.svg" alt="plus" draggable="false"></div>
                                 </div>
                             </div>
+                            
 
                             <div class="price">
                                 <div class="price__now cart-item__price">
                                     <p>от 417.00 BYN</p> 
-                                    <div class="product__question--red" data-qustion="Краткая подсказка: например, по цене: ещё раз повторить, что она не окончательная">
-                                      <img src="/images/icons/red-qustion.svg" alt="question">
+                                    <div class="question-red">
+                                        <img src="/images/icons/red-qustion.svg" alt="question">
                                     </div>
                                   </div>
                                 <div class="price__sale">
                                   <p class="price__cost">от 507.00 BYN</p>
                                   <p class="price__percent">-18%</p>
-                                  <div class="product__time" data-qustion="До конца акции⠀5 дней, 5 часов и 5 минут!">
+                                  <div class="sale-tooltip">
                                     <img src="/images/cart/sale.svg" alt="sale">
                                   </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="cart-item">
+                    </div>
+                    <div class="cart-item">
                     <div class="cart-item__wrapper">
                         <div class="cart-item__checkbox choose">
-                            <input type="checkbox" id="checkbox9">
+                            <input type="checkbox" id="checkbox9" checked>
                             <label for="checkbox9"></label>
                         </div>
                         <div class="cart-item__img">
@@ -69,7 +72,7 @@
                         </div>
                         <div class="cart-item__content">
                             <div class="cart-item__heading">
-                                <h4 class="cart-item__title">НАЗВАНИЕ ПРОДУКТА</h4>
+                                <h4 class="cart-item__title"><a href="/product.html" target="_blank">НАЗВАНИЕ ПРОДУКТА</a></h4>
                                 <div class="cart-item__title-bc"></div>
                             </div>
                             <div class="cart-item__desc">
@@ -90,33 +93,33 @@
                         <div class="cart-item__details">
                             <div class="counter">
                                 <div class="counter__wrapper">
-                                    <button class="counter__btn--plus" onclick="stepper(this)"><img src="/images/cart/minus.svg" alt="minus"></button>
-                                    <input type="number" min="0" max="100" step="1" value="1" class="counter__input" readonly>
-                                    <button class="counter__btn--minus" id="counter-increment" onclick="stepper(this)"><img src="/images/cart/plus.svg" alt="plus"></button>
+                                    <div class="counter__btn--minus" onclick="stepper(this)"><img src="/images/cart/minus.svg" class="disabled-minus disabled" alt="minus" draggable="false"></div>
+                                    <input type="number" min="1" max="9999" step="1" value="1" class="counter__input">
+                                    <div class="counter__btn--plus" onclick="stepper(this)"><img src="/images/cart/plus.svg" alt="plus" draggable="false"></div>
                                 </div>
                             </div>
                             <div class="price">
                                 <div class="price__now cart-item__price">
                                     <p>от 417.00 BYN</p> 
-                                    <div class="product__question--red" data-qustion="Краткая подсказка: например, по цене: ещё раз повторить, что она не окончательная">
-                                      <img src="/images/icons/red-qustion.svg" alt="question">
+                                    <div class="question-red">
+                                        <img src="/images/icons/red-qustion.svg" alt="question">
                                     </div>
                                   </div>
                                 <div class="price__sale">
                                   <p class="price__cost">от 507.00 BYN</p>
                                   <p class="price__percent">-18%</p>
-                                  <div class="product__time" data-qustion="До конца акции⠀5 дней, 5 часов и 5 минут!">
+                                  <div class="sale-tooltip">
                                     <img src="/images/cart/sale.svg" alt="sale">
                                   </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="cart-item">
+                    </div>
+                    <div class="cart-item">
                     <div class="cart-item__wrapper">
                         <div class="cart-item__checkbox choose">
-                            <input type="checkbox" id="checkbox10">
+                            <input type="checkbox" id="checkbox10" checked>
                             <label for="checkbox10"></label>
                         </div>
                         <div class="cart-item__img">
@@ -124,7 +127,7 @@
                         </div>
                         <div class="cart-item__content">
                             <div class="cart-item__heading">
-                                <h4 class="cart-item__title">НАЗВАНИЕ ПРОДУКТА</h4>
+                                <h4 class="cart-item__title"><a href="/product.html" target="_blank">НАЗВАНИЕ ПРОДУКТА</a></h4>
                                 <div class="cart-item__title-bc"></div>
                             </div>
                             <div class="cart-item__desc">
@@ -145,35 +148,34 @@
                         <div class="cart-item__details">
                             <div class="counter">
                                 <div class="counter__wrapper">
-                                    <button class="counter__btn--plus" onclick="stepper(this)"><img src="/images/cart/minus.svg" alt="minus"></button>
-                                    <input type="number" min="0" max="100" step="1" value="1" class="counter__input" readonly>
-                                    <button class="counter__btn--minus" id="counter-increment" onclick="stepper(this)"><img src="/images/cart/plus.svg" alt="plus"></button>
+                                    <div class="counter__btn--minus" onclick="stepper(this)"><img src="/images/cart/minus.svg" class="disabled-minus disabled" alt="minus" draggable="false"></div>
+                                    <input type="number" min="1" max="9999" step="1" value="1" class="counter__input">
+                                    <div class="counter__btn--plus" onclick="stepper(this)"><img src="/images/cart/plus.svg" alt="plus" draggable="false"></div>
                                 </div>
                             </div>
                             <div class="price">
                                 <div class="price__now cart-item__price">
                                     <p>от 417.00 BYN</p> 
-                                    <div class="product__question--red" data-qustion="Краткая подсказка: например, по цене: ещё раз повторить, что она не окончательная">
-                                      <img src="/images/icons/red-qustion.svg" alt="question">
+                                    <div class="question-red">
+                                        <img src="/images/icons/red-qustion.svg" alt="question">
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="cart-item">
+                    </div>
+                    <div class="cart-item">
                     <div class="cart-item__wrapper">
                         <div class="cart-item__checkbox choose">
-                            <input type="checkbox" id="checkbox10">
-                            <label for="checkbox10"></label>
+                            <input type="checkbox" id="checkbox11" checked>
+                            <label for="checkbox11"></label>
                         </div>
                         <div class="cart-item__img">
                             <img src="/images/all-product/poker.png" alt="">
                         </div>
                         <div class="cart-item__content">
                             <div class="cart-item__heading">
-                                <h4 class="cart-item__title">НАГРАДЫ ПО ВАШЕМУ ДИЗАЙНУ</h4>
-                                <div class="cart-item__title-bc"></div>
+                                <h4 class="cart-item__title"><a href="/product.html" target="_blank">НАГРАДЫ ПО ВАШЕМУ ДИЗАЙНУ</a></h4>
                             </div>
                             <div class="cart-item__desc">
                                 <p class="cart-item__wish">
@@ -193,28 +195,58 @@
                         <div class="cart-item__details">
                             <div class="counter">
                                 <div class="counter__wrapper">
-                                    <button class="counter__btn--plus" onclick="stepper(this)"><img src="/images/cart/minus.svg" alt="minus"></button>
-                                    <input type="number" min="0" max="100" step="1" value="1" class="counter__input" readonly>
-                                    <button class="counter__btn--minus" id="counter-increment" onclick="stepper(this)"><img src="/images/cart/plus.svg" alt="plus"></button>
+                                    <div class="counter__btn--minus" onclick="stepper(this)"><img src="/images/cart/minus.svg" class="disabled-minus disabled" alt="minus" draggable="false"></div>
+                                    <input type="number" min="1" max="9999" step="1" value="1" class="counter__input">
+                                    <div class="counter__btn--plus" onclick="stepper(this)"><img src="/images/cart/plus.svg" alt="plus" draggable="false"></div>
                                 </div>
                             </div>
-                            <div class="price">
-                                <p class="cart-item__custom">Просчитывается индивидуально</p>
+                            <div class="cart-item__custom">
+                                <p>Просчитывается 
+                                <div class="question-red">
+                                    <img src="/images/icons/red-qustion.svg" alt="question">
+                                </div>
+                                индивидуально</p> 
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="info" id="info">
+                <div class="container">
+                    <div class="info__wrapper cart-info__wrapper">
+                        <div class="info__body">
+                            <div class="info__item">
+                                <div class="info__title">ЦЕНЫ И СРОКИ</div>
+                                <div class="info__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                            </div>
+                            <div class="info__item">
+                                <div class="info__title">ОПЛАТА И ДОСТАВКА</div>
+                                <div class="info__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                            </div>
+                            <div class="info__item">
+                                <div class="info__title">КОНТАКТЫ</div>
+                                <div class="info__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                            </div>
+                            <div class="info__item">
+                                <div class="info__title">О НАС</div>
+                                <div class="info__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
                             </div>
                         </div>
                     </div>
                 </div>
+                </div>
             </div>
-            <aside class="cart-total">
+        </div>
+        <aside class="cart-total">
                 <div class="cart-total__wrapper">
                     <div class="cart-total__body">
-                        <h4 class="cart-total__title title">ИТОГО</h4>
+                        <h4 class="cart-total__title subtitle">ИТОГО</h4>
                         <div class="cart-total__details">
                             <div class="cart-total__quantity">2 товара на сумму</div>
-                            <div class="price__now cart-item__price">
+                            <div class="cart-total__price-now">
                                 <div class="cart-total__price">от 556.00 BYN</div> 
-                                <div class="product__question--red" data-qustion="Краткая подсказка: например, по цене: ещё раз повторить, что она не окончательная">
-                                  <img src="/images/icons/red-qustion.svg" alt="question">
+                                <div class="question-red">
+                                    <img src="/images/icons/red-qustion.svg" alt="question">
                                 </div>
                             </div>
                         </div>
@@ -236,19 +268,11 @@
                         <button class="cart-total__continue">Продолжить</button>
                     </div>
                 </div>
-            </aside>
-        </div>
-        <div class="question-tooltip--red">
-
-        </div>
-        <div class="tooltip--time">
-
-        </div>
+        </aside>
     </div>
 </div>
 
 <div class="cart-popup hidden">
-    <div class="overlay">
         <div class="cart-popup__wrapper">
             <div class="cart-popup__body">
                 <div class="cart-popup__left">
@@ -259,48 +283,53 @@
                                 <img src="/images/cart/vtb.png" alt="">
                             </div>
                             <div class="price">
-                                <p class="price__now cart-popup__price-now">от 417.00 BYN</p>
+                                <div class="price__now cart-popup__price-now">
+                                    <p>от 417.00 BYN</p> 
+                                    <div class="question-red">
+                                        <img src="/images/icons/red-qustion.svg" alt="question">
+                                    </div>
+                                </div>
                                 <div class="price__sale">
                                   <p class="price__cost">от 507.00 BYN</p>
                                   <p class="price__percent">-18%</p>
-                                  <div class="product__time" data-qustion="До конца акции⠀5 дней, 5 часов и 5 минут!">
+                                  <div class="sale-tooltip">
                                     <img src="/images/cart/sale.svg" alt="sale">
                                   </div>
                                 </div>
-                            </div>
+                              </div>
                         </div>
-                    </div>
-                    
+                    </div>      
                 </div>
+                
                 <div class="cart-popup__right">
-                    <h3 class="title">НАЗВАНИЕ ПРОДУКТА</h3>
+                    <a class="subtitle" href="/product.html">НАЗВАНИЕ ПРОДУКТА<img src="/images/icons/link-icon.svg" alt=""></a>
                     <form action="" class="cart-popup__form">
                         <div class="cart-popup__col">
                             <div class="cart-popup__group">
                                 <div class="product__title">
                                     <p>Ваши пожелания</p> 
-                                    <div class="product__question" data-qustion="Краткая подсказка: например, по цене: ещё раз повторить, что она не окончательная">
+                                    <div class="question-grey">
                                       <img src="/images/product/question.svg" alt="question">
                                     </div>
                                   </div>
-                                <textarea name="" id="" class="cart-popup__textarea">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                <textarea name="" id="" class="cart-popup__textarea">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
                                 </textarea>
                                 <div class="cart-popup__help red-text"><a href="/text-example.html">Нету текста для награды?</a></div>
                             </div>
                             <div class="cart-popup__group">
                                 <div class="product__title">
                                     <p>Ориентировочные размеры</p> 
-                                    <div class="product__question" data-qustion="Краткая подсказка: например, по цене: ещё раз повторить, что она не окончательная">
-                                      <img src="/images/product/question.svg" alt="question">
+                                    <div class="question-grey">
+                                        <img src="/images/product/question.svg" alt="question">
                                     </div>
                                   </div>
-                                <input type="text" class="input-text cart-popup__input" placeholder="300*500*100 мм">
+                                <input type="text" class="input-text cart-popup__input" value="300*500*100 мм">
                             </div>
                             <div class="cart-popup__group">
                                 <div class="product__title">
                                     <p>Дополнительные опции</p> 
-                                    <div class="product__question" data-qustion="Краткая подсказка: например, по цене: ещё раз повторить, что она не окончательная">
-                                      <img src="/images/product/question.svg" alt="question">
+                                    <div class="question-grey">
+                                        <img src="/images/product/question.svg" alt="question">
                                     </div>
                                   </div>
                                 <select class="select">
@@ -321,20 +350,22 @@
                             <div class="cart-popup__group">
                                 <div class="product__title">
                                     <p>Крайний срок готовности</p> 
-                                    <div class="product__question" data-qustion="Краткая подсказка: например, по цене: ещё раз повторить, что она не окончательная">
-                                      <img src="/images/product/question.svg" alt="question">
+                                    <div class="question-grey">
+                                        <img src="/images/product/question.svg" alt="question">
                                     </div>
                                   </div>
                                 <input type="date">
                             </div>
-                            <div class="cart-popup__group counter">
+                            <div class="cart-popup__group">
                                 <div class="cart-popup__heading">
                                     <h4>Количествои</h4>
                                 </div>
-                                <div class="counter__wrapper">
-                                    <button class="counter__btn--plus" onclick="stepper(this)"><img src="/images/cart/minus.svg" alt="minus"></button>
-                                    <input type="number" min="0" max="100" step="1" value="1" class="counter__input" readonly>
-                                    <button class="counter__btn--minus" id="counter-increment" onclick="stepper(this)"><img src="/images/cart/plus.svg" alt="plus"></button>
+                                <div class="counter">
+                                    <div class="counter__wrapper">
+                                        <div class="counter__btn--minus" onclick="stepper(this)"><img src="/images/cart/minus.svg" class="disabled-minus disabled" alt="minus" draggable="false"></div>
+                                        <input type="number" min="1" max="9999" step="1" value="1" class="counter__input">
+                                        <div class="counter__btn--plus" onclick="stepper(this)"><img src="/images/cart/plus.svg" alt="plus" draggable="false"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -342,10 +373,7 @@
                 </div>
                 <button class="cart-popup__close"><img src="/images/cart/close.svg" alt="close"></button>
             </div>
-            <div class="tooltip--time"></div>
-            <div class="question-tooltip">
-
-            </div>
         </div>
-    </div>
 </div>
+
+<div class="overlay hidden"></div>

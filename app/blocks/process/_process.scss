@@ -1,4 +1,9 @@
 .process {
+    img {
+        pointer-events: none;
+        user-select: none;
+    }
+    
     &__background {
         background-image: url(/images/process/process-bc.svg);
         background-repeat: no-repeat;
@@ -21,6 +26,7 @@
     }
 
     &__body {
+        position: relative;
         background-image: url(/images/process/bc.svg);
         background-position: center center;
         background-repeat: no-repeat;
@@ -48,7 +54,7 @@
 
 .process-num {
     position: absolute;
-    top: 145px;
+    top: 96px;
     left: -43px;
     z-index: 5;
 
@@ -88,7 +94,7 @@
 
 .process-num--first {
     position: absolute;
-    top: 107px;
+    top: 112px;
     left: -43px;;
     z-index: 5;
 }
@@ -113,3 +119,63 @@ div.process__body.process__body--right {
 }
 
 
+@media(max-width: 899px) {
+    .process {
+        &__background {
+            padding-top: 61px;
+            background-size: 884px;
+            height: 948px;
+        }
+
+        &__body {
+            background-size: 340px;
+            width: auto;
+            height: auto;
+            margin: 0;
+            padding: 31px 58px 58px 93px;
+        }
+
+        &__title {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+        }
+
+        &__desc {
+            font-size: 12px;
+            line-height: 15px;
+        }
+
+        &__men, .array-line-1, .array-line-2 {
+            display: none;
+        }
+
+        &__content {
+            margin: 0;
+        }
+    }
+
+    .process-num {
+        &__body {
+            background-size: 80px;
+            width: 93px;
+            height: 113px;
+        }
+    }
+    .process-num__title {
+        font-size: 38px;
+        display: flex;
+        align-items: center;
+        width: 40px;
+    }
+
+    .process-num--first, .process-num, .process-num--reversed {
+        top: 84px;
+        left: 0px;
+    }
+
+
+    div.process__body.process__body--right {
+        margin: 0;
+    }
+}

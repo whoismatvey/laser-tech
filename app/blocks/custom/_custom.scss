@@ -8,6 +8,12 @@
         padding: 40px 0 80px 0;
     }
 
+    &__title {
+        text-align: center;
+        font-weight: 700;
+        font-size: 32px;
+    }
+
     &__content {
         text-align: center;
         margin-bottom: 40px;
@@ -48,6 +54,8 @@
         font-weight: 600;
         font-size: 18px;
         margin-bottom: 4px;
+        display: flex;
+        align-items: center;
     }
 
     &__help {
@@ -274,3 +282,4 @@
 .input-date__question:hover ~ .input-date__wrapper{
     display: block;
 }
+

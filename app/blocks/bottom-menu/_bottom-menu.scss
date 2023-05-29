@@ -1,9 +1,9 @@
-.menu {
-    &__container {
-        max-width: 1300px;
-        margin: 0 auto;
-    }
+.bottom-menu {
+    background-color: #fff;
+    z-index: 4;
+}
 
+.menu {
     &__wrapper {
         padding-bottom: 80px;
     }
@@ -34,8 +34,20 @@
     &__title {
         font-weight: 600;
         font-size: 14px;
+        text-align: center;
     }
 }
 
+@media(max-width: 899px) {
+    .menu {
+        &__items {
+            flex-wrap: wrap;
+        }
+
+        &__item:nth-child(odd) {
+           justify-content: flex-end;
+        }
+    }
+}
 
 

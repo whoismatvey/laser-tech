@@ -1,9 +1,12 @@
 .gratitude {
+    position: fixed;
+    right: 10px;
+    bottom: 0;
+    z-index: 11;
     &__wrapper {
         display: flex;
         justify-content: flex-end;
-        padding: 127px 0 61px 0;
-        margin-right: 45px;
+        margin: 0 44px 61px 0;
     }
 
     &__body {
@@ -94,6 +97,14 @@
     }
 
     &__close {
-        padding: 0px 18px;
+        padding: 14px 44px;
+    }
+}
+
+
+
+@media(max-width: 899px) {
+    .gratitude {
+        display: none;
     }
 }

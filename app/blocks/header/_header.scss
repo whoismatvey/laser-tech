@@ -1,5 +1,17 @@
+.header.out {
+	transform: translateY(-100%);
+}
+
 .header {
-  position: relative;
+  position: fixed;
+	top: 0; 
+  left: 0;
+	width: 100%;
+	transition: all .3s ease;
+  z-index: 90;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(15px);
+
     &__wrapper {
       display: flex;
       justify-content: space-between;
@@ -8,43 +20,13 @@
 
     &__list {
       display: flex;
-      gap: 25px;
+      gap: 79px;
     }
 
     &__item {
       padding: 38px 0;
       font-weight: 600;
       text-align: center;
-    }
-
-    &__contact {
-      display: flex;
-    }
-
-    &__tel--bottom {
-      margin-bottom: 5px;
-    }
-
-    &__contact-left {
-      margin-right: 25px;
-    }
-
-    &__email {
-      font-weight: 700;
-    }
-
-    &__social {
-      display: flex;
-      margin-top: 10px;
-      margin-right: 11px;
-    }
-
-    &__social-link {
-      margin-right: 10px;
-    }
-
-    &__social-link:last-child {
-      margin-right: 0;
     }
 
     &__cart-num {
@@ -58,16 +40,32 @@
     &__cart {
       display: flex;
       align-items: center;
+      padding: 10px 13px;     
+      background: #FFFFFF;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+      border-radius: 20px;
+      width: 81px;
 
       img {
+        height: 38px;
+        width: 35px;
         margin-right: 5px;
       }
+    }
+
+    &__cart-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      width: 250px;
     }
   }
 
   .header__dropdown-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
     position: absolute;
-    top: 89px;
+    top: 95px;
     z-index: 44;
     width: 100vw;
     color: black;
@@ -94,9 +92,64 @@
   }
 
   .header__dropdown:hover .header__dropdown-wrapper{
-    display: block;
+    max-height: 288px; /* Здесь можно указать желаемую максимальную высоту меню */
+    transition: max-height 0.5s ease;
+    backdrop-filter: blur(8px);
   }
 
-
-  @media (max-width: 1399px) { 
+  .header__dropdown-wrapper.click{
+    max-height: 288px; /* Здесь можно указать желаемую максимальную высоту меню */
+    transition: max-height 0.5s ease;
+    backdrop-filter: blur(8px);
   }
+
+@media screen and (min-width: 900px) {
+  .header-mobile {
+    display: none;
+  }
+
+  .preview__open {
+    display: none;
+  }
+}  
+  
+@media(max-width: 899px) {
+	.header {
+    &__wrapper {
+      display: none;
+    }
+  }
+
+  .header-mobile {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: #EBECEC;
+    width: 100%;
+    z-index: 99;
+    &__items {
+      display: flex;
+      justify-content: space-between;
+      padding: 7px 0;
+    }
+    &__item a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+
+    &__subtitle {
+      font-weight: 600;
+      font-size: 8px;
+    }
+
+    &__subtitle.active {
+      background: linear-gradient(88.01deg, #730000 -9.57%, #FF0000 115.37%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+  }
+}

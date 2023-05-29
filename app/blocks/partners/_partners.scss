@@ -11,7 +11,8 @@
     height: 100%;
     position: relative;
     &__wrapper {
-        padding: 42px 0 127px 0;
+        display: flex;
+        align-items: center;
     }
 }
 
@@ -22,5 +23,23 @@ button.partners__button-prev {
 button.partners__button-next {
     right: 29px;
 }
+
+.main-page .partners__wrapper {
+    margin-bottom: 130px;
+}
+
+@media(max-width: 899px) {
+    .main-page .partners__wrapper {
+        margin-bottom: 85px;
+    }
+
+    .partners {
+        &__title {
+            margin-bottom: 20px;
+            display: block;
+        }
+    }
+}
+
 
 

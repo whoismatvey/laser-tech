@@ -2,7 +2,7 @@
     <div class="custom__container">
         <div class="custom__wrapper">
             <div class="custom__content">
-                <div class="custom__title title">ОПИСАНИЕ</div>
+                <div class="custom__title">ОПИСАНИЕ</div>
                 <div class="custom__desc">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
@@ -23,11 +23,8 @@
                             <div class="custom-form__wish">
                                 <div class="custom-form__title">
                                     <h4>Ваши пожелания</h4> 
-                                    <img src="/images/custom/question.svg" alt="question" class="custom-form__wish-question">
-                                    <div class="custom-form__wish-wrapper">
-                                        <div class="question__body">
-                                            Краткая подсказка: например, по цене: ещё раз повторить, что она не окончательная
-                                        </div>
+                                    <div class="question-grey">
+                                        <img src="/images/product/question.svg" alt="question">
                                     </div>
                                 </div>
                                 <input type="text" placeholder="Введите здесь" class="input-text">
@@ -37,11 +34,8 @@
                             <div class="custom-form__checkbox">
                                 <div class="custom-form__title">
                                     <h4>Какой-то чек-лист</h4> 
-                                    <img src="/images/custom/question.svg" alt="question" class="custom-form__checkbox-question">
-                                    <div class="custom-form__checkbox-body">
-                                        <div class="question__body">
-                                            Краткая подсказка: например, по цене: ещё раз повторить, что она не окончательная
-                                        </div>
+                                    <div class="question-grey">
+                                        <img src="/images/product/question.svg" alt="question">
                                     </div>
                                 </div>
                                 <div class="custom-form__checkbox-wrapper choose">
@@ -67,11 +61,8 @@
                             <div class="input-file">
                                 <div class="custom-form__title">
                                     <h4>Файл</h4>  
-                                    <img src="/images/custom/question.svg" alt="question" class="input-file__question">
-                                    <div class="input-file__wrapper">
-                                        <div class="question__body">
-                                            Краткая подсказка: например, по цене: ещё раз повторить, что она не окончательная
-                                        </div>
+                                    <div class="question-grey">
+                                        <img src="/images/product/question.svg" alt="question">
                                     </div>
                                 </div>
                                 <input type="file" id="upload-button">
@@ -79,19 +70,16 @@
                                     <p>Прикрепите файл</p>
                                     <img src="/images/custom/file.svg" alt="file">
                                 </label>
-                                <div class="custom-form__help">
-                                    <a href="#">Требования к файлу</a>
+                                <div>
+                                    <a href="#" class="custom-form__help">Требования к файлу</a>
                                 </div>
                             </div>
 
                             <div class="input-date">
                                 <div class="custom-form__title">
                                     <h4>Крайний срок</h4> 
-                                    <img src="/images/custom/question.svg" alt="question" class="input-date__question">
-                                    <div class="input-date__wrapper">
-                                        <div class="question__body">
-                                            Краткая подсказка: например, по цене: ещё раз повторить, что она не окончательная
-                                        </div>
+                                    <div class="question-grey">
+                                        <img src="/images/product/question.svg" alt="question">
                                     </div>
                                 </div>
                                 <input type="date">
@@ -104,11 +92,8 @@
                             <div class="custom-form__select">
                                 <div class="custom-form__title">
                                     Дополнительные опции
-                                    <img src="/images/custom/question.svg" alt="question" class="select__question">
-                                    <div class="select__wrapper">
-                                        <div class="question__body">
-                                            Краткая подсказка: например, по цене: ещё раз повторить, что она не окончательная
-                                        </div>
+                                    <div class="question-grey">
+                                        <img src="/images/product/question.svg" alt="question">
                                     </div>
                                 </div>
                                 <select class="select">
@@ -124,9 +109,9 @@
                             <div class="counter">
                                 <div class="custom-form__title">Количество</div>
                                 <div class="counter__wrapper">
-                                    <button class="counter__btn--plus" onclick="stepper(this)"><img src="/images/cart/minus.svg" alt="minus"></button>
-                                    <input type="number" min="0" max="100" step="1" value="1" class="counter__input" readonly>
-                                    <button class="counter__btn--minus" id="counter-increment" onclick="stepper(this)"><img src="/images/cart/plus.svg" alt="plus"></button>
+                                    <div class="counter__btn--minus" onclick="stepper(this)"><img src="/images/cart/minus.svg" class="disabled-minus disabled" alt="minus" draggable="false"></div>
+                                    <input type="number" min="1" max="9999" step="1" value="1" class="counter__input">
+                                    <div class="counter__btn--plus" onclick="stepper(this)"><img src="/images/cart/plus.svg" alt="plus" draggable="false"></div>
                                 </div>
                             </div>
                         </div>
@@ -134,7 +119,7 @@
                     <div class="custom-form__footer">
                         <div class="custom-form__buttons">
                             <button class="custom-form__cart red-btn">В корзину</button>
-                            <button class="custom-form__order">Быстрый заказ</button>
+                            <div class="custom-form__order ">Быстрый заказ</div>
                         </div>
                     </div>
                 </div>
@@ -144,17 +129,18 @@
 </div>
 
 <div class="relations-popup hidden">
-    <div class="overlay">
-        <div class="relations-popup__wrapper">
-            <div class="relations-popup__body">
-              <h3 class="relations-popup__title red-text">БЫСТРЫЙ ЗАКАЗ</h3>
-              <div class="relations-popup__content">
-                <div class="relations-popup__subtitle">Как с Вами связаться?</div>
-                <input type="text" class="relations-popup__input input-text" placeholder="Номер телефона / email / соц. сети / мессе">
-              </div>
-              <button class="relations-popup__btn red-btn">Оформить заказ</button>
-              <button class="relations-popup__close"><img src="/images/product/close.svg" alt="close"></button>
-            </div>
+    <div class="relations-popup__wrapper">
+        <div class="relations-popup__body">
+          <h3 class="relations-popup__title red-text">БЫСТРЫЙ ЗАКАЗ</h3>
+          <div class="relations-popup__content">
+            <div class="relations-popup__subtitle">Как с Вами связаться?</div>
+            <input type="text" class="relations-popup__input input-text" placeholder="Номер телефона / email / соц. сети / мессе">
+            <div class="relations-popup__input-bc"></div>
+          </div>
+          <a href="/bill.html" class="relations-popup__btn red-btn">Оформить заказ</a>
+          <button class="relations-popup__close"><img src="/images/product/close.svg" alt="close"></button>
         </div>
     </div>
-  </div>
+</div>
+
+<div class="overlay hidden"></div>
