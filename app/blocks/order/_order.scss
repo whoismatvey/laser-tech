@@ -138,13 +138,11 @@ input[type="radio"] {
         margin-top: 15px;
         justify-content: space-between;
     }
-
-    &__col {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
     
+    &__group--mt {
+        margin-top: 25px;
+    }
+
     &__group:last-child {
         width: 349px;
       }

@@ -244,13 +244,11 @@
 }
 
 .cart-popup {
-    
-
     &__wrapper {
         position: fixed;
-        top: 20%;
-        left: 18%;
-        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         z-index: 99;
     }
 
@@ -258,6 +256,10 @@
         display: flex;
         align-items: flex-start;
         gap: 10px;
+    }
+
+    &__right {
+        width: 626px;
     }
 
     &__body {

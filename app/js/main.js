@@ -185,8 +185,6 @@ const sliderThumbs = new Swiper('.product-slider__thumbs .swiper-container', { /
 	}
 });
 
-
-
 // Инициализация слайдера изображений
 const sliderImages = new Swiper('.product-slider__images .swiper-container', { // ищем слайдер превью по селектору
 	// задаем параметры
@@ -212,8 +210,6 @@ const sliderImages = new Swiper('.product-slider__images .swiper-container', { /
 		}
 	}
 });
-
-
 
 let modal = document.querySelector("#myModal");
 if(modal) {
@@ -244,7 +240,6 @@ if(modal) {
   // Attach click event handler to the close button
   span.addEventListener("click", closeModal);
 }
-
 
 /*
 const sliderThumbs = new Swiper('.product-slider__thumbs .swiper-container', { // ищем слайдер превью по селектору
@@ -379,7 +374,6 @@ if (counters) {
 }*/
 //Open Menu
 let btnOpenMenu = document.querySelector('.card__open-menu');
-
 if(btnOpenMenu) {
   let menu = document.querySelector('.header__dropdown-wrapper');
 
@@ -397,7 +391,6 @@ if(btnOpenMenu) {
   })
 }
 
-
 const openButtonOrder = document.querySelectorAll('.gallery__item-btn');
 if(openButtonOrder) {
   const closePopupOrder = document.querySelector('.order-popup__close');
@@ -406,21 +399,23 @@ if(openButtonOrder) {
 
   openButtonOrder.forEach(function(button) {
     button.addEventListener('click', () => {
-      popupOrder.classList.add('animate__fadeIn')
       header.style.zIndex = '0'
       popupOrder.classList.remove('hidden')
-      overlay.classList.remove('hidden')
+      overlay.classList.add('show')
+      document.body.classList.add('no-scroll');
     });
 
   overlay.addEventListener('click', () => {
-    overlay.classList.add('hidden')
+    overlay.classList.remove('show')
     popupOrder.classList.add('hidden')
+    document.body.classList.remove('no-scroll');
   })
 
     closePopupOrder.addEventListener('click', () => {
       header.style.zIndex = '98'
       popupOrder.classList.add('hidden')
-      overlay.classList.add('hidden')
+      overlay.classList.remove('show')
+      document.body.classList.remove('no-scroll');
     });
   });
 }
@@ -586,35 +581,6 @@ if(header) {
   });
 }
 
-const bill = document.querySelector('.bill__body');
-let isScrolledOver100 = false;
-
-if (bill) {
-  window.addEventListener('scroll', function () {
-    let scrolled = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (scrolled > 100 && !isScrolledOver100) {
-      setTimeout(function () {
-        bill.style.top = '550px';
-      }, 1000);
-      setTimeout(function () {
-        bill.style.top = '350px';
-      }, 2000);
-      setTimeout(function () {
-        bill.style.top = '300px';
-      }, 3000);
-      setTimeout(function () {
-        bill.classList.add('up');
-      }, 4000);
-
-      isScrolledOver100 = true;
-    } else if (scrolled <= 100 && isScrolledOver100) {
-      bill.classList.add('up');
-      isScrolledOver100 = false;
-    }
-  });
-}
-
 function validateInput(event) {
   var char = event.which || event.keyCode;
   if ((char < 65 || char > 90) && (char < 97 || char > 122) && (char < 1040 || char > 1103) && char !== 1025 && char !== 1105) {
@@ -657,7 +623,7 @@ tippy('.question-grey', {
   maxWidth: 185,
 });
 
-tippy('.custom-form__help', {
+tippy('.red-help', {
   theme: 'dark',
   placement: 'right-start',
   content: 'jpg, jpeg, png, cdr, eps, ai, svg. Размер до 10мб',
@@ -673,21 +639,23 @@ if(openButtonRelationsCustom) {
   const closePopupRelations = document.querySelector('.relations-popup__close');
   const popupRelations= document.querySelector('.relations-popup');
   const overlay = document.querySelector('.overlay')
+  let releations = document.querySelector('.relations-popup__body')
 
   openButtonRelationsCustom.addEventListener('click', function(e) {
     e.preventDefault();
     popupRelations.classList.remove('hidden');
-    overlay.classList.remove('hidden')
+    overlay.classList.add('show')
+    releations.classList.add('fadeTop')
   });
 
   overlay.addEventListener('click', () => {
     popupRelations.classList.add('hidden')
-    overlay.classList.add('hidden')
+    overlay.classList.remove('show')
   })
   
   closePopupRelations.addEventListener('click', function() {
     popupRelations.classList.add('hidden')
-    overlay.classList.add('hidden')
+    overlay.classList.remove('show')
   });
 }
 
@@ -706,6 +674,7 @@ if (cartTotalInput) {
   });
 }
 
+
 // Product Read Mor
 let buttonReadMore = document.querySelector('.product__read-more');
 if(buttonReadMore) {
@@ -716,12 +685,12 @@ if(buttonReadMore) {
   buttonReadMore.addEventListener('click', () => {
     if (!isExpandedText) {
       textMore.classList.add('product__more-text--show');
-      textMoreBc.classList.add('hidden');
-      buttonReadMore.textContent = 'Скрыть';
+      textMoreBc.classList.add('opacity')
+      buttonReadMore.textContent = 'Свернуть';
       isExpandedText = true;
     } else {
       textMore.classList.remove('product__more-text--show');
-      textMoreBc.classList.remove('hidden');
+      textMoreBc.classList.remove('opacity')
       buttonReadMore.textContent = 'Развернуть';
       isExpandedText = false;
     }
@@ -733,18 +702,19 @@ const buttonTagMore = document.querySelector('.tag__more-btn');
 if(buttonTagMore) {
   const tagsMore = document.querySelector('.tag__more-tags');
   const tagMoreBc = document.querySelector('.tag__white-bc');
+  const tagContent = document.querySelector('.tag__content')
   isExpandedTag = false;
 
   buttonTagMore.addEventListener('click', function() {
     if (!isExpandedTag) {
       tagsMore.classList.add('click')
-      tagMoreBc.classList.add('hidden')
-      buttonTagMore.textContent = 'Скрыть';
+      buttonTagMore.textContent = 'Меньше тегов';
+      tagMoreBc.classList.add('opacity')
       isExpandedTag = true;
     } else {
       tagsMore.classList.remove('click')
-      tagMoreBc.classList.remove('hidden')
       buttonTagMore.textContent = 'Развернуть';
+      tagMoreBc.classList.remove('opacity')
       isExpandedTag = false;
     }
   });
@@ -813,20 +783,45 @@ if(customFormOrder) {
   customFormOrder.addEventListener('click', function(e) {
     e.preventDefault();
     popupRelations.classList.remove('hidden');
-    overlay.classList.remove('hidden')
+    overlay.classList.add('show')
+    document.body.classList.add('no-scroll');
   });
 
   overlay.addEventListener('click', () => {
     popupRelations.classList.add('hidden')
-    overlay.classList.add('hidden')
+    overlay.classList.remove('show')
+    document.body.classList.remove('no-scroll');
   })
   
   closePopupRelations.addEventListener('click', function() {
     popupRelations.classList.add('hidden')
-    overlay.classList.add('hidden')
+    overlay.classList.remove('show')
+    document.body.classList.remove('no-scroll');
   });
 }
 
+
+let shareButton = document.querySelector(".bill__share");
+if(shareButton) {
+  let shareBlock = document.querySelector(".share");
+  
+  shareButton.addEventListener("click", () => {
+    shareBlock.classList.toggle("active");
+  });
+
+  window.addEventListener("click", function(event) {
+    if (!shareBlock.contains(event.target) && !shareButton.contains(event.target)) {
+      shareBlock.classList.remove("active");
+    }
+  });
+}
+
+var textarea = document.querySelector(".cart-popup__textarea");
+
+textarea.addEventListener("keyup", function() {
+  this.style.height = "auto";
+  this.style.height = this.scrollHeight + "px";
+});
 
 const openButtonProduct = document.querySelectorAll('.cart-item__edit');
 if(openButtonProduct) {
@@ -836,21 +831,23 @@ if(openButtonProduct) {
 
   overlay.addEventListener('click', () => {
     popupProduct.classList.add('hidden')
-    overlay.classList.add('hidden')
+    overlay.classList.remove('show');
+    document.body.classList.remove('no-scroll');
   })
 
   openButtonProduct.forEach(function(button) {
     button.addEventListener('click', () => {
       popupProduct.classList.remove('hidden')
-      overlay.classList.remove('hidden')
+      overlay.classList.add('show');
+      document.body.classList.add('no-scroll');
     });
   
     closeButtonProduct.addEventListener('click', function() {
       popupProduct.classList.add('hidden')
-      overlay.classList.add('hidden')
+      overlay.classList.remove('show');
+      document.body.classList.remove('no-scroll');
     });
   });
 }
-
 
 

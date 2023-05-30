@@ -1,17 +1,21 @@
 .bill {
     &__container {
-        max-width: 1000px;
-        margin: 0 auto;
+       position: relative;
     }
 
     &__wrapper {
+        position: relative;
         padding-top: 30px;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    
+    &__img--left {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
 
     &__body {
         position: relative;
@@ -21,7 +25,6 @@
         font-weight: 400;
         font-size: 18px;
         line-height: 23px;
-        top: 633px;
         width: 957px;
         z-index: 3;
     }
@@ -189,3 +192,77 @@
     }
 }
 
+.share.active {
+    opacity: 1;
+    transition: opacity 1s;
+    visibility: visible;
+}
+
+.share {
+    position: absolute;
+    top: -141px;
+    right: -154px;
+    background-image: linear-gradient(88.01deg, #730000 -9.57%, #FF0000 115.37%);
+    border-radius: 20px;
+    margin: 0 auto;
+    padding: 2px;
+    width: 402px;
+    z-index: 2;
+    font-family: 'Montserrat';
+    display: block;
+    opacity: 0;
+    transition: opacity 1s;
+    visibility: hidden;
+
+
+    &__body {
+        position: relative;
+        padding: 18px;
+        background: #fff;
+        border-radius: 18px;
+
+        input {
+            background: #E8E8E8;
+            border-radius: 15px;
+            height: 50px;
+            width: 365px;
+            font-size: 12px;
+            padding-left: 15px;
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 16px;
+        margin-bottom: 13px;
+    }
+
+    &__btn {
+        position: absolute;
+        right: 12px;
+        top: 54px;
+        background-image:  linear-gradient(88.01deg, #730000 -9.57%, #FF0000 115.37%);
+        border-radius: 16px;
+        box-sizing: border-box;
+        display: block;
+        height: 50px;
+        padding: 2px 2.8px;
+        width: 115px;
+        z-index: 2;
+        
+        span {
+            align-items: center;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            border-radius: 14px;
+        }
+
+        p {
+            font-weight: 600;
+            font-size: 12px;
+        }
+    }
+}

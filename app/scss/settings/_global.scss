@@ -434,6 +434,7 @@ button.swiper-button-prev.swiper-button-disabled{
 }
 
 .overlay-click {
+  overflow: hidden;
   position: fixed;
   top: 0;
   left: 0;
@@ -445,6 +446,9 @@ button.swiper-button-prev.swiper-button-disabled{
 }
 
 .overlay {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
   position: fixed;
   top: 0;
   left: 0;
@@ -452,7 +456,16 @@ button.swiper-button-prev.swiper-button-disabled{
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(15px);
-  z-index: 88;
+  z-index: 92;
+}
+
+.overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .overlay.no-show {
@@ -503,16 +516,7 @@ button.swiper-button-prev.swiper-button-disabled{
   display: none;
 }
 
-.overlay {
-  z-index: 91;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(15px);
-}
+
 
 .view-all {
   text-decoration: underline;

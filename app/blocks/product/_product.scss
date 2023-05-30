@@ -139,10 +139,17 @@
     position: absolute;
     bottom: -12px;
     left: 0;
-    height: 50px;
+    height: 60px;
     width: 100%;
     z-index: 4;
     background: linear-gradient(0deg, #FFFFFF 18.08%, rgba(255, 255, 255, 0.4) 100%);
+    opacity: 1;
+    transition: .6s ease;
+  }
+
+  &__white-bc.opacity {
+    transition: .6s ease;
+    opacity: 0;
   }
 
   &__read-more {
@@ -160,19 +167,25 @@
   }
 
   &__text-more {
-    transition: max-height 2s ease;
+    transition: 1s ease;
     display: block;
     max-height: 0;
     overflow: hidden;
   }
 
   &__more-text--show{
-    max-height: 288px; 
-    transition: max-height 2s ease;
+    max-height: 60px; 
+    transition: 1s ease;
+    transition-duration: 0;
   }
 }
 
+
+
 .tag {
+  position: relative;
+  height: 160px;
+  
   &__more-btn {
     margin-top: 5px;
     font-size: 12px;
@@ -188,15 +201,16 @@
   }
 
   &__more-tags {
-    transition: max-height 2s ease;
+    transition: .6s ease;
     display: block;
     max-height: 0;
-    overflow: hidden;
+    opacity: 0;
   }
 
   &__more-tags.click {
-    max-height: 288px; 
-    transition: max-height 2s ease;
+    max-height: 25px; 
+    transition: .6s ease;
+    opacity: 1;
   }
   
   &__btn {
@@ -213,26 +227,36 @@
   }
 
   &__content {
-    position: relative;
     display: flex;
     flex-direction: column;
     max-width: 270px;
     margin-top: 8px;
-    gap: 10px;
   }
 
   &__row {
-    gap: 10px;
+    display: inline;
+    margin-bottom: 10px;
+  }
+
+  div &__row:last-child {
+    margin-bottom: 0;
   }
 
   &__white-bc {
     position: absolute;
-    height: 51px;
-    width: 100%;
-    bottom: -17px;
-    left: 0;
+    height: 71px;
+    width: 300px;
+    bottom: 22px;
+    left: -22px;
     z-index: 4;
-    background: linear-gradient(0deg, #FFFFFF 18.08%, rgba(255, 255, 255, 0.4) 100%);
+    background: linear-gradient(0deg, #FFFFFF 18.08%, rgba(255, 255, 255, 0.5) 100%);
+    opacity: 1;
+    transition: .6s ease;
+  }
+
+  &__white-bc.opacity {
+    transition: .6s ease;
+    opacity: 0;
   }
 }
 
@@ -381,8 +405,12 @@ div.swiper-wrapper {
   transform: rotate(180deg);
 }
 
+.show-popup {
+  transform: translate(calc(-50% + 20px), -50%); /* Сдвигаем элемент на 20 пикселей вправо */
+}
+
 .relations-popup {
-  position: fixed;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -453,6 +481,7 @@ div.swiper-wrapper {
     width: 190px;
     padding: 15px 24px;
     margin: 0 auto;
+    cursor: pointer;
   }
 
   &__close {
@@ -504,3 +533,17 @@ div.swiper-wrapper {
   } 
 }
 
+.fadeTop {
+  animation: fadeTop .3s ease;
+}
+
+@keyframes fadeTop {
+  0% {
+    opacity: 0;
+    transform: translate3d(0,-15%,0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
