@@ -57,6 +57,14 @@ input[type="radio"] {
         font-size: 24px;
     }
 
+    &__group {
+        position: relative;
+    }
+
+    img.select__arrow {
+        right: 70px;
+    }
+
     &__group input {
         width: 300px;
         font-weight: 400;
@@ -111,6 +119,9 @@ input[type="radio"] {
         background-color: #E4E4E5;
     }
 
+    &__group-requisites {
+        margin-top: 25px;
+    }
 
     &__tel-checkbox {
         display: flex;
@@ -171,6 +182,7 @@ input[type="radio"] {
         textarea {
             background: #E8E8E8;
             color: #323232;
+            
         }
     }
 
@@ -316,7 +328,7 @@ input[type="radio"] {
     }
 }
 
-
-/*
-
-*/
+div.select-order {
+    top: 39px;
+    right: 63px;
+}

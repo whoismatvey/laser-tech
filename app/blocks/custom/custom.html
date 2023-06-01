@@ -17,25 +17,23 @@
             <form action="" class="custom-form">
                 <div class="custom-form__wrapper">
                     <div class="custom-form__header">
-
                         <div class="custom-form__col">
-
                             <div class="custom-form__wish">
                                 <div class="custom-form__title">
                                     <h4>Ваши пожелания</h4> 
                                     <div class="question-grey">
-                                        <img src="/images/product/question.svg" alt="question">
+                                        <img src="/images/product/question.svg" alt="question" draggable="false">
                                     </div>
                                 </div>
-                                <input type="text" placeholder="Введите здесь" class="input-text">
-                                <div class="custom-form__help"><a href="/text-example.html">Нету текста для награды?</a></div>
+                                <textarea class="input-text product__textarea textarea" placeholder="Введите здесь"></textarea>
+                                <div class="custom-form__text red-text"><a href="/text-example.html">Нету текста для награды?</a></div>
                             </div>
 
                             <div class="custom-form__checkbox">
                                 <div class="custom-form__title">
                                     <h4>Какой-то чек-лист</h4> 
                                     <div class="question-grey">
-                                        <img src="/images/product/question.svg" alt="question">
+                                        <img src="/images/product/question.svg" alt="question" draggable="false">
                                     </div>
                                 </div>
                                 <div class="custom-form__checkbox-wrapper choose">
@@ -62,16 +60,16 @@
                                 <div class="custom-form__title">
                                     <h4>Файл</h4>  
                                     <div class="question-grey">
-                                        <img src="/images/product/question.svg" alt="question">
+                                        <img src="/images/product/question.svg" alt="question" draggable="false">
                                     </div>
                                 </div>
                                 <input type="file" id="upload-button">
                                 <label for="upload-button">
                                     <p>Прикрепите файл</p>
-                                    <img src="/images/custom/file.svg" alt="file">
+                                    <img src="/images/custom/file.svg" alt="file" draggable="false">
                                 </label>
-                                <div>
-                                    <a href="#" class="custom-form__help red-help">Требования к файлу</a>
+                                <div class="custom-form__help">
+                                    <span class=" red-help">Требования к файлу</span>
                                 </div>
                             </div>
 
@@ -79,7 +77,7 @@
                                 <div class="custom-form__title">
                                     <h4>Крайний срок</h4> 
                                     <div class="question-grey">
-                                        <img src="/images/product/question.svg" alt="question">
+                                        <img src="/images/product/question.svg" alt="question" draggable="false">
                                     </div>
                                 </div>
                                 <input type="date">
@@ -93,9 +91,13 @@
                                 <div class="custom-form__title">
                                     Дополнительные опции
                                     <div class="question-grey">
-                                        <img src="/images/product/question.svg" alt="question">
+                                        <img src="/images/product/question.svg" alt="question" draggable="false">
                                     </div>
                                 </div>
+                                <div class="select-arrow">
+                                    <span class="select-arrow-left"></span>
+                                    <span class="select-arrow-right"></span>
+                                  </div>
                                 <select class="select">
                                     <option selected>Выберите</option>
                                     <option>Cappuccino</option>
@@ -118,8 +120,8 @@
                     </div>
                     <div class="custom-form__footer">
                         <div class="custom-form__buttons">
-                            <button class="custom-form__cart red-btn">В корзину</button>
-                            <div class="custom-form__order ">Быстрый заказ</div>
+                            <button class="custom-form__cart red-hover-btn">В корзину</button>
+                            <div class="custom-form__order red-hover-btn"><span><p class="text-hover-red">Быстрый заказ</p></span></div>
                         </div>
                     </div>
                 </div>
@@ -137,10 +139,10 @@
             <input type="text" class="relations-popup__input input-text" placeholder="Номер телефона / email / соц. сети / мессе">
             <div class="relations-popup__input-bc"></div>
           </div>
-          <a href="/bill.html" class="relations-popup__btn red-btn">Оформить заказ</a>
-          <button class="relations-popup__close"><img src="/images/product/close.svg" alt="close"></button>
+          <a href="/bill.html" class="relations-popup__btn red-hover-btn">Оформить заказ</a>
+          <button class="relations-popup__close"><img src="/images/product/close.svg" alt="close" draggable="false"></button>
         </div>
     </div>
 </div>
 
-<div class="overlay"></div>
+<div class="overlay animate__animated"></div>

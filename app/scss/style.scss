@@ -4,6 +4,7 @@
 @import 'settings/reset';
 @import 'settings/libs';
 @import 'settings/global';
+@import 'settings/animate';
 
 //common blocks
 @import '../blocks/header/header';
@@ -39,5 +40,6 @@
 @import '../blocks/gallery/gallery.scss';
 @import '../blocks/order/order.scss';
 @import '../blocks/pagination/pagination.scss';
+@import '../blocks/news/news.scss';
 
 

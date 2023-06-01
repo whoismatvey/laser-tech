@@ -38,7 +38,7 @@ div.main-slider__slide {
 	opacity: 1;
 }
 
-span.swiper-pagination-bullet-active::before {
+.main-slider__pagination span.swiper-pagination-bullet-active::before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -79,15 +79,10 @@ button.swiper-button-next.main-slider__btn--next {
 		justify-content: center;
 		align-items: center;
 		padding: 16px 44px;
-		background: linear-gradient(88.01deg, #730000 -9.57%, #FF0000 115.37%);
-		backdrop-filter: blur(8.5px);
-		border-radius: 15px;
 		color: #FFF;
 		position: absolute;
 		right: 40px;
 		bottom: 60px;
-		font-weight: 600;
-		font-size: 16px;
 	}
 }
 
@@ -140,6 +135,7 @@ button.swiper-button-next.main-slider__btn--next {
 	.main-slider__btn {
 		display: none;
 	}
+	
 	.preview__open {
 		position: relative;
 		display: flex;

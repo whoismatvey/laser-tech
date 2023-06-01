@@ -11,6 +11,27 @@
         border-radius: 8px;
     }
 
+    &__item {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      will-change: transform;
+      
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+      }
+    }
+
+    &__item:hover {
+      transform: scale(1.01);
+    }
+  
+
     &__tag--white {
       background: #fff;
     }
@@ -26,16 +47,41 @@
     &__more-tags {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 1s ease;
+      transition: max-height .6s ease;
       display: flex;
       flex-wrap: wrap;
       gap: 15px 10px;
     }
 
+    &__goods {
+      border-radius: 15px;
+      display: block;
+      font-size: 16px; /*18*/
+      height: 50px;
+      padding: 2.2px 2.4px 2.4px 2.4px;
+      font-weight: 600;
+      width: 99%;
+      position: relative;
+      z-index: 2;
+
+      span {
+        align-items: center;
+        background: #ffffff;
+        border-radius: 13px;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    &__goods.red-hover-btn {
+      width: 181px;
+    }
 
     &__more-tags.click {
-      max-height: 288px; 
-      transition: max-height 1s ease;
+      max-height: 66px;
+      transition: max-height .6s ease;
     }
 
     &__items {
@@ -60,6 +106,8 @@
     }
 
     &__item-wrapper {
+      position: absolute;
+      top: 0;
       height: 100%;
       display: flex;
       flex-direction: row-reverse;
@@ -152,4 +200,9 @@
 
 .order-popup  .product__content {
   width: 640px;
+}
+
+div.select-popup {
+  top: 13px;
+  right: -13px;
 }

@@ -48,6 +48,12 @@
         gap: 25px;
     }
 
+    &__text {
+        font-size: 10px;
+        text-decoration: underline;
+        text-decoration-color: #c30101;
+    }
+
     &__title {
         display: flex;
         gap: 4px;
@@ -59,10 +65,9 @@
     }
 
     &__help {
+        cursor: default;
         margin-top: 4px;
         font-size: 10px;
-        text-decoration: underline;
-        text-decoration-color: #c30101;
         background: linear-gradient(88.01deg, #730000 -9.57%, #FF0000 115.37%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -74,6 +79,10 @@
         input {
             width: 300px;
         }
+    }
+
+    &__select {
+        position: relative;
     }
 
     &__checkbox {
@@ -106,7 +115,7 @@
         display: flex;
         gap: 20px;
     }
-
+/*
     &__order {
         position: relative;
         padding: 15px 32px;
@@ -117,28 +126,42 @@
         background-clip: text;
         text-fill-color: transparent;
         cursor: pointer;
-    }
+    }*/
 
-    &__order::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-image: url('/images/custom/btn-bc.svg');
-        background-repeat: no-repeat;
-        z-index: -1;
-        width: 204px;
+    &__order  {
+        border-radius: 15px;
+        display: block;
+        font-size: 16px; /*18*/
         height: 50px;
-    }
+        padding: 2.2px 2.4px 2.4px 2.4px;
+        font-weight: 600;
+        width: 99%;
+        position: relative;
+        z-index: 2;
+        cursor: pointer;
+    
+        span {
+          align-items: center;
+          background: #ffffff;
+          border-radius: 13px;
+          display: flex;
+          justify-content: center;
+          height: 100%;
+          width: 100%;
+        }
+      }
+    
+      &__order.red-hover-btn {
+        width: 181px;
+      }
+
+
 
     &__cart {
         padding: 15px 52px;
     }
 
-    &__select {
-        margin-bottom: 16px;
-    }
-
+    
     &__checkbox-wrapper {
         display: flex;
         gap: 15px;
@@ -154,23 +177,7 @@
    
 }
 
-.select {
-    width: 300px;
-    height: 50px;
-    padding: 13px 15px;
-    font-size: 12px;
-    cursor: pointer;
-    background: #E8E8E8;
-    border-radius: 15px;
-    background-image: url("/images/custom/select.svg");
-    background-repeat: no-repeat;
-    background-position: 94% 50%;
-    background-size: 24px;
-    outline: none;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-}
+
 
 
 .choose {
@@ -224,14 +231,6 @@
     width: 185px;
 }
 
-
-.select__wrapper {
-    display: none;
-    position: absolute;
-    right: -143px;
-    top: 4px;
-}
-
 .custom-form__wish-wrapper {
     display: none;
     z-index: 4;
@@ -264,23 +263,4 @@
     bottom: 52px;
 }
 
-.select__question:hover ~ .select__wrapper {
-    display: block;
-}
-
-.custom-form__wish-question:hover ~ .custom-form__wish-wrapper {
-    display: block;
-}
-
-.custom-form__checkbox-question:hover ~ .custom-form__checkbox-body {
-    display: block;
-}
-
-.input-file__question:hover ~ .input-file__wrapper {
-    display: block;
-}
-
-.input-date__question:hover ~ .input-date__wrapper{
-    display: block;
-}
 

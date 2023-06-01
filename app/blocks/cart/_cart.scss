@@ -232,7 +232,6 @@
     &__continue {
         width: 100%;
         color: #fff;
-        background: linear-gradient(88.01deg, #730000 -9.57%, #FF0000 115.37%);
         border-radius: 15px;
         width: 100%;
         padding: 15px 0;
@@ -259,7 +258,7 @@
     }
 
     &__right {
-        width: 626px;
+        width: 630px;
     }
 
     &__body {
@@ -307,15 +306,15 @@
 
     &__textarea {
         width: 300px;
-        padding: 10px 20px 10px 15px;
+        padding: 17px 20px 0px 15px;
         background: #E8E8E8;
         border-radius: 15px;
         font-weight: 500;
         font-size: 12px;
         color: #6A6A6A;
         line-height: 15px;
-        height: 65px;
-        overflow: hidden;
+        min-height: 50px;
+        max-height: 80px;
     }
 
     &__input {
