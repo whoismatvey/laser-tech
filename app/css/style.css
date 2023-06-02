@@ -876,7 +876,7 @@ div .menu-active {
   visibility: visible;
 }
 
-.product__select-wrapper {
+.select-wrapper {
   position: relative;
   width: 300px;
 }
@@ -7760,6 +7760,10 @@ div .member__img--3 {
   bottom: 52px;
 }
 
+div.custom-select {
+  top: 40px;
+}
+
 .info {
   z-index: 4;
   background: #fff;
@@ -9514,6 +9518,7 @@ div.swiper-wrapper {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
   will-change: transform;
+  cursor: pointer;
 }
 .gallery__item img {
   max-width: 100%;

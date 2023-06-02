@@ -1,9 +1,9 @@
 <div class="gallery">
-    <div class="container">
-        <div class="gallery__wrapper">
-            <div class="gallery__header">
-                <div class="gallery__title title">ГАЛЕРЕЯ</div>
-                <div class="gallery__tags">
+  <div class="container">
+      <div class="gallery__wrapper">
+          <div class="gallery__header">
+              <div class="gallery__title title">ГАЛЕРЕЯ</div>
+              <div class="gallery__tags">
                   <div class="gallery__content">
                       <button class="gallery__tag gallery__tag--all tag-active">Все</button>
                       <button class="gallery__tag">Теги</button>
@@ -55,23 +55,23 @@
                     </div>
                   </div>
                   <button class="more-btn more-btn__tags">Больше тегов</button>
-                  <button class="more-btn more-btn__close hidden">Закрыть</button>
+                  <button class="more-btn more-btn__close hidden">Меньше тегов</button>
               </div>
-            </div>
-        </div>
-    </div>
-    <div class="gallery__main">
-        <div class="gallery__items">
-          <div class="gallery__item-hight gallery__item  gallery__item-btn myImg"><img src="/images/product/product-big.png" alt=""></div>
-          <div class="gallery__item-hight gallery__item gallery__item-btn--goods"><img src="/images/product/product-big.png" alt=""></div>
-          <div class="gallery__item-hight gallery__item  gallery__item-btn myImg"><img src="/images/product/product-big.png" alt=""></div>
-          <div class="gallery__item-hight gallery__item gallery__item-btn--goods"><img src="/images/product/product-big.png" alt=""></div>
-        </div>
-    </div>
+          </div>
+      </div>
   </div>
-  
-  
-  <div class="order-popup hidden">
+  <div class="gallery__main">
+      <div class="gallery__items">
+        <div class="gallery__item-hight gallery__item  gallery__item-btn myImg"><img src="/images/product/product-big.png" alt=""></div>
+        <div class="gallery__item-hight gallery__item gallery__item-btn--goods"><img src="/images/product/product-big.png" alt=""></div>
+        <div class="gallery__item-hight gallery__item  gallery__item-btn myImg"><img src="/images/product/product-big.png" alt=""></div>
+        <div class="gallery__item-hight gallery__item gallery__item-btn--goods"><img src="/images/product/product-big.png" alt=""></div>
+      </div>
+  </div>
+</div>
+
+
+<div class="order-popup hidden">
     <div class="order-popup__wrapper">
         <div class="order-popup__body fadeTop">
           <div class="product__header">
@@ -236,7 +236,7 @@
                       <img src="/images/product/question.svg" alt="question" draggable="false">
                     </div>
                   </div>
-                  <div class="product__select-wrapper">
+                  <div class="select-wrapper">
                     <div class="select-arrow select-popup">
                       <span class="select-arrow-left"></span>
                       <span class="select-arrow-right"></span>
@@ -252,7 +252,8 @@
       
                 <div class="product__buttons">
                   <button class="product__cart red-hover-btn">В корзину</button>
-                  <a href="/product.html" class="gallery__goods red-hover-btn"><span><p class="text-hover-red">Быстрый заказ</p></span></a>
+                  <a href="/product.html" class="gallery__goods red-hover-btn"><span><p class="text-hover-red">Открыть товар</p></span></a>
+                </div>
               </form>
             </div>
           </div>
@@ -261,16 +262,14 @@
     </div>
 </div>
        
-<div class="overlay"></div>
-         
+<div class="overlay animate__animated"></div>
+
 <div id="myModal" class="modal animate__animated ">
   <div class="modal__wrapper" >
     <img class="modal__close" src="/images/cart/close.svg" alt="close" draggable="false">
     <img class="modal__content" id="img01">
   </div>
 </div>
-                  
-                      
-  
-  
-  
+                    
+
+
