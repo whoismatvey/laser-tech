@@ -5,12 +5,14 @@
                 <div class="cart__items">
                     <div class="cart-item">
                     <div class="cart-item__wrapper">
-                        <div class="cart-item__checkbox choose">
-                            <input type="checkbox" id="checkbox8" checked>
-                            <label for="checkbox8"></label>
-                        </div>
-                        <div class="cart-item__img">
-                            <img src="/images/cart/product.png" alt="">
+                        <div class="cart-item__left">
+                            <div class="cart-item__checkbox choose">
+                                <input type="checkbox" id="checkbox8" checked>
+                                <label for="checkbox8"></label>
+                            </div>
+                            <div class="cart-item__img">
+                                <img src="/images/cart/product.png" alt="">
+                            </div>
                         </div>
                         <div class="cart-item__content">
                             <div class="cart-item__heading">
@@ -63,13 +65,16 @@
                     </div>
                     <div class="cart-item">
                     <div class="cart-item__wrapper">
-                        <div class="cart-item__checkbox choose">
-                            <input type="checkbox" id="checkbox9" checked>
-                            <label for="checkbox9"></label>
+                        <div class="cart-item__left">
+                            <div class="cart-item__checkbox choose">
+                                <input type="checkbox" id="checkbox9" checked>
+                                <label for="checkbox9"></label>
+                            </div>
+                            <div class="cart-item__img">
+                                <img src="/images/cart/product.png" alt="">
+                            </div>
                         </div>
-                        <div class="cart-item__img">
-                            <img src="/images/cart/product.png" alt="">
-                        </div>
+                        
                         <div class="cart-item__content">
                             <div class="cart-item__heading">
                                 <h4 class="cart-item__title"><a href="/product.html" target="_blank">НАЗВАНИЕ ПРОДУКТА</a></h4>
@@ -118,13 +123,16 @@
                     </div>
                     <div class="cart-item">
                     <div class="cart-item__wrapper">
-                        <div class="cart-item__checkbox choose">
-                            <input type="checkbox" id="checkbox10" checked>
-                            <label for="checkbox10"></label>
+                        <div class="cart-item__left">
+                            <div class="cart-item__checkbox choose">
+                                <input type="checkbox" id="checkbox10" checked>
+                                <label for="checkbox10"></label>
+                            </div>
+                            <div class="cart-item__img">
+                                <img src="/images/cart/product.png" alt="">
+                            </div>
                         </div>
-                        <div class="cart-item__img">
-                            <img src="/images/cart/product.png" alt="">
-                        </div>
+                        
                         <div class="cart-item__content">
                             <div class="cart-item__heading">
                                 <h4 class="cart-item__title"><a href="/product.html" target="_blank">НАЗВАНИЕ ПРОДУКТА</a></h4>
@@ -166,13 +174,16 @@
                     </div>
                     <div class="cart-item">
                     <div class="cart-item__wrapper">
-                        <div class="cart-item__checkbox choose">
-                            <input type="checkbox" id="checkbox11" checked>
-                            <label for="checkbox11"></label>
+                        <div class="cart-item__left">
+                            <div class="cart-item__checkbox choose">
+                                <input type="checkbox" id="checkbox11" checked>
+                                <label for="checkbox11"></label>
+                            </div>
+                            <div class="cart-item__img">
+                                <img src="/images/all-product/poker.png" alt="">
+                            </div>
                         </div>
-                        <div class="cart-item__img">
-                            <img src="/images/all-product/poker.png" alt="">
-                        </div>
+                        
                         <div class="cart-item__content">
                             <div class="cart-item__heading">
                                 <h4 class="cart-item__title"><a href="/product.html" target="_blank">НАГРАДЫ ПО ВАШЕМУ ДИЗАЙНУ</a></h4>
@@ -211,6 +222,38 @@
                     </div>
                     </div>
                 </div>
+                <aside class="cart-total__mobile">
+                    <div class="cart-total__wrapper">
+                        <div class="cart-total__body">
+                            <h4 class="cart-total__title subtitle">ИТОГО</h4>
+                            <div class="cart-total__details">
+                                <div class="cart-total__quantity">2 товара на сумму</div>
+                                <div class="cart-total__price-now">
+                                    <div class="cart-total__price">от 556.00 BYN</div> 
+                                    <div class="question-red">
+                                        <img src="/images/icons/red-qustion.svg" alt="question" draggable="false">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-total__info">
+                                <div class="cart-total__sale">
+                                    <p>Сумма скидок</p>
+                                    <p class="red-text">-120.00 BYN</p>
+                                </div>
+                                <div class="cart-total__delivery">
+                                    <p>Доставка</p>
+                                    <p class="red-text">Бесплатно</p>
+                                </div>
+                            </div>
+                            <div class="cart-total__coupon">
+                                <h6 class="cart-total__coupon-title">Скидочный купон</h6>
+                                <input type="text" class="cart-total__input input-text" placeholder="Введите здесь">
+                                <button class="cart-total__enter"><img src="/images/cart/enter-promo.svg" alt="" draggable="false"></button>
+                            </div>
+                            <button class="cart-total__continue red-hover-btn"><span><p>Продолжить</p></span></button>
+                        </div>
+                    </div>
+                </aside>
                 <div class="info" id="info">
            
                     <div class="info__wrapper cart-info__wrapper">
@@ -236,73 +279,77 @@
               
                 </div>
             </div>
-        </div>
+        </div>  
         <aside class="cart-total">
-                <div class="cart-total__wrapper">
-                    <div class="cart-total__body">
-                        <h4 class="cart-total__title subtitle">ИТОГО</h4>
-                        <div class="cart-total__details">
-                            <div class="cart-total__quantity">2 товара на сумму</div>
-                            <div class="cart-total__price-now">
-                                <div class="cart-total__price">от 556.00 BYN</div> 
-                                <div class="question-red">
-                                    <img src="/images/icons/red-qustion.svg" alt="question" draggable="false">
-                                </div>
+            <div class="cart-total__wrapper">
+                <div class="cart-total__body">
+                    <h4 class="cart-total__title subtitle">ИТОГО</h4>
+                    <div class="cart-total__details">
+                        <div class="cart-total__quantity">2 товара на сумму</div>
+                        <div class="cart-total__price-now">
+                            <div class="cart-total__price">от 556.00 BYN</div> 
+                            <div class="question-red">
+                                <img src="/images/icons/red-qustion.svg" alt="question" draggable="false">
                             </div>
                         </div>
-                        <div class="cart-total__info">
-                            <div class="cart-total__sale">
-                                <p>Сумма скидок</p>
-                                <p class="red-text">-120.00 BYN</p>
-                            </div>
-                            <div class="cart-total__delivery">
-                                <p>Доставка</p>
-                                <p class="red-text">Бесплатно</p>
-                            </div>
-                        </div>
-                        <div class="cart-total__coupon">
-                            <h6 class="cart-total__coupon-title">Скидочный купон</h6>
-                            <input type="text" class="cart-total__input input-text" placeholder="Введите здесь">
-                            <button class="cart-total__enter"><img src="/images/cart/enter-promo.svg" alt="" draggable="false"></button>
-                        </div>
-                        <button class="cart-total__continue red-hover-btn"><span><p>Продолжить</p></span></button>
                     </div>
+                    <div class="cart-total__info">
+                        <div class="cart-total__sale">
+                            <p>Сумма скидок</p>
+                            <p class="red-text">-120.00 BYN</p>
+                        </div>
+                        <div class="cart-total__delivery">
+                            <p>Доставка</p>
+                            <p class="red-text">Бесплатно</p>
+                        </div>
+                    </div>
+                    <div class="cart-total__coupon">
+                        <h6 class="cart-total__coupon-title">Скидочный купон</h6>
+                        <input type="text" class="cart-total__input input-text" placeholder="Введите здесь">
+                        <button class="cart-total__enter"><img src="/images/cart/enter-promo.svg" alt="" draggable="false"></button>
+                    </div>
+                    <button class="cart-total__continue red-hover-btn"><span><p>Продолжить</p></span></button>
                 </div>
+            </div>
         </aside>
     </div>
 </div>
 
 <div class="cart-popup hidden">
-        <div class="cart-popup__wrapper">
+    <div class="cart-popup__wrapper">
             <div class="cart-popup__body fadeTop">
                 <div class="cart-popup__left">
                     <button class="cart-popup__edit"><img src="/images/cart/edit.svg" alt="" draggable="false"></button>
-                    <div class="cart-popup__image">
                         <div class="cart-popup__product">
                             <div class="cart-popup__img">
                                 <img src="/images/cart/vtb.png" alt="">
                             </div>
-                            <div class="price">
-                                <div class="price__now cart-popup__price-now">
-                                    <p>от 417.00 BYN</p> 
-                                    <div class="question-red">
-                                        <img src="/images/icons/red-qustion.svg" alt="question" draggable="false">
-                                    </div>
-                                </div>
-                                <div class="price__sale">
-                                  <p class="price__cost">от 507.00 BYN</p>
-                                  <p class="price__percent">-18%</p>
-                                  <div class="sale-tooltip">
-                                    <img src="/images/cart/sale.svg" alt="sale" draggable="false">
-                                  </div>
-                                </div>
-                              </div>
+                        </div>   
+                </div>
+                <div class="price">
+                    <div class="price__now cart-popup__price-now">
+                        <p>от 417.00 BYN</p> 
+                        <div class="question-red">
+                            <img src="/images/icons/red-qustion.svg" alt="question" draggable="false">
                         </div>
-                    </div>      
+                    </div>
+                    <div class="price__sale">
+                      <p class="price__cost">от 507.00 BYN</p>
+                      <p class="price__percent">-18%</p>
+                      <div class="sale-tooltip">
+                        <img src="/images/cart/sale.svg" alt="sale" draggable="false">
+                      </div>
+                    </div>
                 </div>
                 
                 <div class="cart-popup__right">
-                    <a class="subtitle" href="/product.html" target="_blank">НАЗВАНИЕ ПРОДУКТА<img src="/images/icons/link-icon.svg" alt="" draggable="false"></a>
+                    <div class="cart-popup__caption">
+                        <img src="/images/icons/link-icon.svg" alt="" draggable="false" class="cart-popup__link">
+                        <div class="cart-popup__header">
+                            <h4 class="cart-popup__title"><a href="/product.html" target="_blank">НАГРАДЫ ПО ВАШЕМУ ДИЗАЙНУ</a></h4>
+                        </div>
+                    </div>
+                    <!--<a class="cart-popup__subtitle subtitle" href="/product.html" target="_blank">НАЗВАНИЕ ПРОДУКТА<img src="/images/icons/link-icon.svg" alt="" draggable="false"></a>-->
                     <form action="" class="cart-popup__form">
                         <div class="cart-popup__col">
                             <div class="cart-popup__group">
@@ -344,7 +391,7 @@
                                   </select>
                                   </div>
                             </div>
-                            <div class="cart-popup__buttons">
+                            <div class="cart-popup__buttons cart-popup__buttons--hidden">
                                 <button class="cart-popup__save red-hover-btn">Сохранить</button>
                                 <button class="cart-popup__cancel">Отмена</button>
                             </div>
@@ -357,11 +404,18 @@
                                         <img src="/images/product/question.svg" alt="question" draggable="false">
                                     </div>
                                   </div>
+                                  <div class="product__title-mobile">
+                                    <p>Крайний срок<br>готовности
+                                      <div class="question-grey">
+                                        <img src="/images/product/question.svg" alt="question" draggable="false">
+                                      </div>
+                                    </p> 
+                                  </div>
                                 <input type="date">
                             </div>
                             <div class="cart-popup__group">
                                 <div class="cart-popup__heading">
-                                    <h4>Количествои</h4>
+                                    <h4>Количество</h4>
                                 </div>
                                 <div class="counter">
                                     <div class="counter__wrapper">
@@ -372,11 +426,15 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="cart-popup__buttons">
+                            <button class="cart-popup__save red-hover-btn">Сохранить</button>
+                            <button class="cart-popup__cancel">Отмена</button>
+                        </div>
                     </form>
                 </div>
                 <button class="cart-popup__close"><img src="/images/cart/close.svg" alt="close" draggable="false"></button>
             </div>
-        </div>
+    </div>
 </div>
 
 <div class="overlay animate__animated "></div>

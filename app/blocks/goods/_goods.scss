@@ -52,10 +52,6 @@
         padding: 6px 0 19px 13px; 
     } 
 
-    &__marquee {
-        max-width: 196px;
-    }
-
     &__title {
         width: 100%;
         font-weight: 600;
@@ -72,7 +68,7 @@
         content: '';
         position: absolute;
         display: block;
-        right: 0;
+        right: -1px;
         top: 0;
         width: 60px;
         height: 27px;
@@ -133,7 +129,7 @@
 }
 
 .priorbank-goods__wrapper {
-    margin: 40px 0 115px 0;
+    margin: 40px 0 80px 0;
 }
 
 
@@ -192,6 +188,7 @@
 
         &__body {
             height: auto;
+            max-height: 233px;
         }
 
         &__content {
@@ -212,7 +209,7 @@
         }
 
         &__heading {
-            --title-width: 136px;
+            --title-width: 146px;
             --transparency-width: 10px;
         }
 
@@ -225,3 +222,27 @@
         }
     }
   }
+
+@media(max-width: 899px) {
+    .product-goods__wrapper {
+        margin: 34px 0 80px 0;
+    }
+
+    .goods-slider {
+        height: auto;
+
+        &__img {
+            height: 178px;
+
+            img {
+                height: 100%;
+            }
+        }
+    }
+
+    .goods {
+        & .container-right {
+            padding: 0 15px;
+        }
+    }
+}

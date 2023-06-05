@@ -83,7 +83,13 @@
     &__list-item {
         font-size: 14px;
     } 
+
+    &__open-menu--mobile {
+        display: none;
+    }
 }
+
+
 
 @media(max-width: 899px) {
     .advantages {
@@ -111,6 +117,10 @@
             margin-bottom: 10px;
         }
 
+        &__open-menu--mobile {
+            display: block;
+        }
+
         &__bottom {
             height: auto;
             gap: 10px;
@@ -119,6 +129,15 @@
         &__list {
             margin: 0;
         }
+
+        &__open-menu {
+            display: none;
+        }
+
+        &__link {
+            text-align: left;
+        }
+        
     }
 }
 

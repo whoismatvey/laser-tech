@@ -25,6 +25,10 @@
     }
 }
 
+.mobile-custom {
+    display: none;
+}
+
 .custom-form {
     &__wrapper {
         padding: 40px;
@@ -266,4 +270,101 @@
 
 div.custom-select {
     top: 40px;
+}
+
+@media(max-width: 899px) {
+    .custom {
+        &__title {
+            font-size: 25px;
+        }
+
+        &__desc {
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        &__content {
+            margin-bottom: 20px;
+        }
+
+        &__wrapper {
+            padding: 25px 0 40px 0;
+        }
+
+        & .upload-button {
+            width: 100%;
+        }
+
+        & .custom-form__col {
+            max-width: 100%;
+        }
+    }
+
+    .custom-form {
+        &__header {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        &__help {
+            margin-top: 6px;
+        }
+
+        &__text {
+            margin-top: 2px;
+        }
+
+        &__wrapper {
+            padding: 20px;
+            border-radius: 22px;
+        }
+
+        &__checkbox {
+            display: none;
+        }
+
+        & .input-date, & .counter {
+            display: none;
+        }
+
+        &__buttons {
+            flex-wrap: wrap;
+        }
+
+        &__cart, &__order.red-hover-btn {
+            width: 100%;
+        }
+
+        &__title--mobile {
+            display: none;
+        }
+    }
+
+    .mobile-custom {
+        display: block;
+        
+        & .custom-form__checkbox {
+            display: block;
+        }
+
+        &__wrapper {
+            gap: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+           
+
+        &__row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        & .input-date {
+            display: block;
+        }
+
+        & .counter {
+            display: block;
+        }
+    }
 }

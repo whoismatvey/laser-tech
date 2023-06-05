@@ -21,3 +21,15 @@
         font-size: 20px;
    }
 }
+
+@media(max-width: 899px) {
+   .about {
+      &__title {
+          margin-bottom: 5px;
+      }
+
+      &__img {
+          border-radius: 10px;
+      }
+  }
+}

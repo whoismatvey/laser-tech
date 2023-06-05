@@ -1,8 +1,6 @@
 .workers {
     &__cards {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 37px;
+        position: relative;
     }
 
     &__wrapper {
@@ -73,12 +71,15 @@
     }
 }
 
-
-  
   .product-image {
     width: 100%;
     height: auto;
   }
   
   
+  @media(max-width: 899px) {
+    .workers__wrapper {
+        margin-bottom: 40px;
+    }
+  }
   

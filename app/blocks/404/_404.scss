@@ -27,3 +27,33 @@
         max-width: 525px;
     }
 }
+
+@media(max-width: 899px) {
+    .error-404 {
+        &__wrapper {
+            flex-direction: column-reverse;
+            gap: 40px;
+            margin: 20px 0 0 0;
+
+            img {
+                width: 88%;
+            }
+        }
+
+        &__content {
+            text-align: center;
+        }
+
+        &__title {
+            font-size: 120px;
+        }
+
+        &__desc {
+            font-size: 20px;
+        }
+
+        .bill__hidden {
+            border-radius: 100px;
+        }
+    }
+}

@@ -6,10 +6,29 @@
 
     &__title {
         font-weight: 700;
-        font-size: calc( 25px + 7 * ((100vw - 320px) / 1600) );
+        font-size: 36px;
         display: -ms-flexbox;
         text-align: center;
         width: 100%;
         margin: 90px 0 90px 0;
+    }
+}
+
+.menu-mobile {
+    display: none;
+}
+
+
+@media(max-width: 899px) {
+    .cart-empty {
+        &__title {
+            font-size: 25px;
+            margin: 25px 0 40px 0;
+            text-align: center;
+        }
+    }
+
+    .menu-mobile {
+        display: block;
     }
 }

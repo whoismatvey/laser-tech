@@ -153,11 +153,17 @@
       flex-direction: column;
       align-items: center;
       gap: 5px;
+      justify-content: space-between;
+      height: 100%;
     }
 
     &__subtitle {
       font-weight: 600;
       font-size: 8px;
+    }
+
+    &__btn--mt4 {
+      margin-top: 4px;
     }
 
     &__subtitle.active {
@@ -167,5 +173,42 @@
       background-clip: text;
       text-fill-color: transparent;
     }
+  }
+
+  .header-popup {
+    position: fixed;
+    background-color: #fff;
+    z-index: 80;
+    opacity: 0;
+    -moz-opacity: 0; /* Firefox and Mozilla browsers */
+   -webkit-opacity: 0; /* WebKit browser e.g. Safari */
+   filter: alpha(opacity=0); /* For IE8 and earlier */
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+    padding: 0 15px;
+    width: 100vw;
+
+    &__title {
+      font-weight: 700;
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    .phone-menu {
+      padding: 30px 0 60px 0;
+    }
+
+    .phone-menu__left {
+      margin-top: 0;
+    }
+  }
+
+  .header-popup.active {
+    -moz-opacity: 1; /* Firefox and Mozilla browsers */
+    -webkit-opacity: 1; /* WebKit browser e.g. Safari */
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease;
   }
 }

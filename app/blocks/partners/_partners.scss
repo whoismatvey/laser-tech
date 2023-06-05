@@ -28,12 +28,24 @@ button.partners__button-next {
     margin-bottom: 130px;
 }
 
+.contacts-page .partners__title {
+    font-size: 32px;
+    text-align: left;
+}
+
 @media(max-width: 899px) {
     .main-page .partners__wrapper {
         margin-bottom: 85px;
     }
 
     .partners {
+        &__title {
+            margin-bottom: 20px;
+            display: block;
+        }
+    }
+
+    .partners .member-page {
         &__title {
             margin-bottom: 20px;
             display: block;

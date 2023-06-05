@@ -36,3 +36,20 @@
     display: flex;
     justify-content: left;
 }
+
+@media(max-width: 899px) {
+    .info {
+        &__title {
+            font-size: 18px;
+        }
+
+        &__body {
+            border-radius: 22px;
+            width: 100%;
+        }
+        
+        &__wrapper {
+            padding-bottom: 80px;
+        }
+    }
+}

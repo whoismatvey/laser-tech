@@ -76,4 +76,46 @@ div.map-geolocation-control{
 
 .ymaps-controls {
     display: none !important;
-  }
+}
+
+@media(max-width: 899px) {
+    .contacts {
+        &__wrapper {
+            padding: 15px 0 40px 0;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__adress &__desc {
+            max-width: 300px;
+        }
+
+        &__title {
+            font-size: 30px;
+        }
+
+        .container-right {
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        &__requisites {
+            margin-bottom: 20px;
+        }
+
+        &__map {
+            width: 100%;
+            border-radius: 0;
+        }
+
+        &__info {
+            padding: 0 15px;
+        }
+    }
+    
+    div .map-widget-map-component {
+        position: absolute;
+        top: 0;
+        left: -155px;
+    }
+}

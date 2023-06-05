@@ -11,3 +11,21 @@
     display: flex;
     align-items: center;
 }
+
+@media(max-width: 899px) {
+    .question-form {
+        &__wrapper {
+            display: block;
+            padding: 60px 0 80px 0;
+    
+            img {
+                display: none;
+            }
+        }
+    
+        .container-right {
+            padding: 0 15px;
+        }
+    }
+}
+

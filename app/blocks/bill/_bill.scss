@@ -26,7 +26,7 @@
         font-weight: 400;
         font-size: 18px;
         line-height: 23px;
-        width: 957px;
+        width: 990px;
         z-index: 3;
     }
 
@@ -36,7 +36,8 @@
         background-image: url(/images/bill/bill-bc.svg);
         background-position: bottom;
         background-repeat: no-repeat;
-        width: 957px;
+        background-size: 1000px;
+        width: 990px;
         height: 100%;
         left: 0;
         bottom: -6px;
@@ -263,5 +264,108 @@
             font-weight: 600;
             font-size: 12px;
         }
+    }
+}
+
+@media(max-width: 899px) {
+    .bill {
+        &__desc {
+            font-size: 18px;
+            line-height: 22px;  
+        }
+
+        &__img--left {
+            display: none;
+        }
+
+        &__body::before {
+            content: "";
+            position: absolute;
+            background-image: url(/images/bill/bill-mobile-bc.svg);
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: 100vw;
+            top: 58%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -3;
+        }
+
+        &__body {
+            font-size: 10px;
+            padding: 92px 16px 40px 16px;
+            max-width: 375px;
+            line-height: 13px;
+            z-index: -3;
+        }
+
+        &__title {
+            font-weight: 700;
+            font-size: 25px;
+        }
+
+        &__header {
+            margin-bottom: 0;
+            padding: 0 10px;
+        }
+
+        &__heading {
+            font-size: 12px;
+            margin-bottom: 18px;
+        }
+
+        &__good {
+            font-size: 10px;
+        }
+
+        &__contacts {
+           display: none;
+        }
+
+        .container {
+            padding: 0;
+        }
+
+        &__good {
+            line-height: 13px;
+            & .final {
+                display: none;
+            }
+
+            & .equals {
+                display: none;
+            }
+        }
+
+        &__total, &__goods, &__account, &__message, &__info {
+            padding: 10px 0;
+        }
+
+        &__info--right {
+            text-align: right;
+        }
+
+        &__delivery, &__discount {
+            margin-bottom: 3px;
+        }
+
+        &__share, &__download {
+            width: 20px;
+        }
+
+        &__buttons {
+            top: 72px;
+            right: 15px;
+        }
+    }
+
+    .bill-page .menu {
+        background-color: #fff;
+    }
+
+    .bill-page .menu__img {
+        margin-bottom: 10px;
+        width: 93%;
     }
 }

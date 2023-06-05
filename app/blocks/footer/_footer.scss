@@ -185,9 +185,14 @@
 	.footer-bottom {
 		&__content {
 			flex-direction: column;
-			gap: 11px;
+			gap: 14px;
 			align-items: flex-start;
 			margin-bottom: 30px;
+		}
+
+		&__projects {
+			flex-wrap: wrap;
+			row-gap: 14px;
 		}
 	}
 
@@ -199,7 +204,7 @@
 		height: 1px;
 		background-color: #fff;
 		left: 0;
-		bottom: 222px;
+		bottom: 295px;
 		opacity: 0.5;
 	}
 

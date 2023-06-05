@@ -18,9 +18,7 @@
     }
 
     &__items {
-        display: flex;
-        justify-content: center;
-        gap: 40px;
+        max-width: 1095px;
         margin-top: 23px;
     }
 
@@ -30,6 +28,10 @@
         width: 100%;
     }
 
+    &__group {
+        display: flex;
+        justify-content: center;
+    }
 
     &__body {
         background-image: url(/images/member/member-bc.svg);
@@ -53,6 +55,71 @@ div .member__body--3 {
 }
 
 div .member__img--3 {
-    width: 75%;
+    width: 75%
 }
 
+@media(max-width: 899px) {
+    .member {
+        &__heading {
+            font-size: 18px;
+        }
+
+        &__items {
+            position: relative;
+            max-width: 100%;
+        }
+
+        &__body {
+            background-size: 285px;
+            width: 276px;
+            height: 227px;
+            padding: 58px 25px 86px 26px;
+        }
+
+        &__title {
+            font-size: 12px;
+            margin: 17px 0 6px 0;
+        }
+
+        &__desc {
+            font-size: 10px;
+        }
+
+        &__img {
+            width: 80%;
+        }
+
+        .member__body--2 {
+            padding: 57px 20px 86px 39px;
+        }
+
+        .member__body--3 {
+            padding: 35px 30px 85px 34px;
+        }
+    }
+}
+
+.member__pagination span.swiper-pagination-bullet  {
+	height: 8px;
+    width: 8px;
+    border-radius: 100px;
+    border: 1px solid rgb(192 38 38);
+    background-color: #fff;
+    opacity: 1;
+}
+
+button.swiper-pagination.member__pagination.swiper-pagination-bullets {
+    top: 232px;
+    left: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.member__pagination span.swiper-pagination-bullet-active {
+	position: relative;
+    height: 12px;
+    width: 12px;
+	background: linear-gradient(88.01deg, #730000 -9.57%, #FF0000 115.37%);
+	opacity: 1;
+}

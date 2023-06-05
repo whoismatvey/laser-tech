@@ -9,8 +9,6 @@
         box-shadow: 0px 14px 20px rgba(0, 0, 0, 0.1);
         border-radius: 50px;
     }
-
-    
 }
 
 input[type="radio"] {
@@ -331,4 +329,108 @@ input[type="radio"] {
 div.select-order {
     top: 39px;
     right: 63px;
+}
+
+
+@media(max-width: 599px) {
+    .order {
+        &__wrapper {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 22px;
+        }
+
+        &__title {
+            font-size: 20px;
+        }
+    }
+
+    .order-form {
+        &__main {
+            margin-top: 20px;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        &__heading--bm15 {
+            margin-bottom: 10px;
+        }
+
+        &__title {
+            font-size: 18px;
+        }
+
+        &__group--mt {
+            margin-top: 10px;
+        }
+
+        &__tel-checkbox {
+            margin-bottom: 5px;
+        }
+
+        .order-form__group:last-child {
+            width: 100%;
+        }
+
+        &__group input {
+            width: 100%;
+            font-weight: 400;
+        }
+
+        &__required {
+            text-align: left;
+            margin-top: 2px;
+        }
+
+        &__row {
+            position: relative;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        &__footer {
+            position: relative;
+
+            .subtitle {
+                font-size: 32px;
+            }
+        }
+
+        &__body {
+            margin-left: 0px;
+        }
+
+        &__send {
+            margin-top: 15px;
+            margin-left: 0;
+            width: 100%;
+        }
+
+        &__total::before, &__sale::before, &__free::before, &__main::after, &__main::before {
+            transform: rotate(90deg);
+            left: 156px;
+            height: 311px;
+        }
+
+        &__total::before {
+            bottom: 83px;
+        }
+
+        &__sale::before {  
+            bottom: 25px;
+        }
+
+        &__free::before {
+            bottom: -31px;
+        }
+
+        &__main::after {
+            bottom: 0px;
+        }
+        
+        &__main::before {
+            top: 280px;
+        }
+    }
 }

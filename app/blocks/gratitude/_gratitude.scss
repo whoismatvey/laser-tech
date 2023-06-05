@@ -113,10 +113,66 @@
     }
 }
 
-
+.gratitude-mobile {
+    display: none;
+}
 
 @media(max-width: 899px) {
     .gratitude {
         display: none;
+    }
+    
+
+    .gratitude-mobile{
+        display: block;
+        position: fixed;
+        bottom: 59px;
+        z-index: 44;
+
+        &__wrapper {
+            background-color: #fff;
+            padding: 16px 16px 23px 16px;
+            border-radius: 22px 22px 0px 0px;
+            width: 100vw;
+        }
+
+        &__desc {
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        .gratitude__title {
+            margin-bottom: 15px;
+        }
+
+        &__btn  {
+            border-radius: 15px;
+            display: block;
+            font-size: 16px; /*18*/
+            height: 50px;
+            padding: 2.2px 2.4px 2.4px 2px;
+            font-weight: 600;
+            width: 99%;
+            position: relative;
+            z-index: 2;
+        }
+    
+        .gratitude__btn.red-hover-btn {
+            width: 177px;
+        }
+
+        &__btn  span {
+            align-items: center;
+            background: #ffffff;
+            border-radius: 13px;
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+        }
+    
+        .gratitude__promo {
+            margin: 5px 0 15px 0;
+        }    
     }
 }

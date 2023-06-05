@@ -27,6 +27,10 @@
         padding: 4px 6px;
     }
 
+    &__more {
+        display: none;
+    } 
+
     &__tag--active {
         text-shadow: 0.4px 0px 0px #FFFFFF;
         color: #fff;
@@ -71,7 +75,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 40px
+        gap: 37px
     }
 }
 
@@ -182,4 +186,98 @@
 .categories-item:hover {
     transform: scale(1.01);
     box-shadow: 0px 14px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+@media(max-width: 899px) {
+    .categories {    
+        &__list {
+            display: none;
+        }
+
+        &__filter {
+            padding: 0;
+            
+            img {
+                width: 30px;
+            }
+        }
+
+        &__filter::after {
+            display: none;
+        }
+
+        &__items {
+            column-gap: 10px;
+            row-gap: 16px;
+        }
+
+        &__header {
+            padding: 10px 0 20px 0;
+        }
+
+        &__more {
+            font-weight: 600;
+            font-size: 16px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin-top: 25px;
+        }
+
+        &__main {
+            margin-bottom: 80px;
+        }
+    }
+
+    .categories-item {
+        &__body {
+            width: 167px;
+        } 
+
+        &__img {
+            height: 188px;
+        }
+
+        &__title {
+            font-size: 12px;
+            margin-bottom: 2px;
+        }
+
+        &__sale-price, &__price, &__sale, &__desc {
+            font-size: 9px;
+        }
+
+        &__content {
+            padding: 8px 11px 10px 11px;
+            height: 59px;
+        }
+
+        &__title-custom {
+            font-size: 10px;
+        }
+
+        &__custom::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url('/images/categories/border-mobile.svg');
+            width: 166px;
+            height: 247px;
+        }
+    }
+
+    .categories-item--hidden {
+        display: flex;
+        gap: 10PX;
+        flex-wrap: wrap;
+    }
+
+    .pagination {
+        display: none;
+    }
+
 }

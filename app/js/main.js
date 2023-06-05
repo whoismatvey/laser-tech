@@ -1,7 +1,7 @@
 const swiper = new Swiper('.goods-slider', {
     // Optional parameters
     direction: 'horizontal',
-    slidesPerView: 5.5,
+    slidesPerView: 5.4,
     spaceBetween: 10,
     freeMode: true,
     navigation: {
@@ -10,14 +10,63 @@ const swiper = new Swiper('.goods-slider', {
     },
     breakpoints: {
       200: {
-        slidesPerView: 2.7,
+        slidesPerView: 2.3,
         spaceBetween: 10,
       },
       900: {
-        slidesPerView: 5.5,
+        slidesPerView: 5.4,
         spaceBetween: 42,
       }
     }
+});
+
+const workers = new Swiper('.workers__cards', {
+  // Optional parameters
+  direction: 'horizontal',
+  slidesPerView: 4,
+  spaceBetween: 37,
+  grabCursor: true,
+  speed: 1000,
+  freeMode: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    200: {
+      slidesPerView: 1.2,
+      spaceBetween: 15,
+    },
+    900: {
+      slidesPerView: 4,
+      spaceBetween: 42,
+    }
+  }
+});
+
+const member = new Swiper('.member__items', {
+  // Optional parameters
+  direction: 'horizontal',
+  slidesPerView: 3,
+  grabCursor: true,
+  speed: 1000,
+  pagination: {
+    el: '.member__pagination',
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    200: {
+      slidesPerView: 1.25,
+      
+    },
+    900: {
+      slidesPerView: 3,
+      spaceBetween: 42,
+    }
+  }
 });
 
 const partnersSlider = new Swiper('.partners-slider', {
@@ -159,6 +208,18 @@ const awardsSlider = new Swiper('.awards-slider__slider', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+    breakpoints: {
+      200: {
+        slidesPerView: 1.2,
+        navigation: {
+          nextEl: '.awards-slider-next',
+          prevEl: '.awards-slider-prev',
+      },
+      },
+      900: {
+        slidesPerView: 4,
+      }
+    }
 });
 
 // Инициализация превью слайдера
@@ -174,10 +235,12 @@ const sliderThumbs = new Swiper('.product-slider__thumbs .swiper-container', {
   speed: 1000,
   breakpoints: {
     0: {
-      direction: 'horizontal'
+      direction: 'horizontal',
+      slidesPerView: 3,
     },
     768: {
-      direction: 'vertical'
+      direction: 'vertical',
+      slidesPerView: 3,
     }
   }
 });
@@ -358,9 +421,9 @@ let news = document.querySelector('.news__wrapper');
 
 if (news) {
   back.style.marginTop = '0';
-  news.style.marginTop = '95px'; // Измените значение отступа на нужное вам
+  news.style.marginTop = '15px'; // Измените значение отступа на нужное вам
 } else if(back) {
-  back.style.marginTop = '95px';
+  back.style.marginTop = '15px';
 }
 
 /*
@@ -594,6 +657,33 @@ if(buttonGalleryMoreTags) {
 }
 
 //Show promokod 
+
+/*
+let gratitudeContent = document.querySelector('.gratitude__content')
+
+gratitudeContent.addEventListener('click', (e) => {
+  let gratitudeBtn = e.target
+  if (gratitudeContent.classList.contains('.gratitude__btn')) {
+    let gratitude = document.querySelector('.gratitude')
+    let gratitudeContent = document.querySelector('.gratitude__content')
+    let gratitudePromo = document.querySelector('.gratitude__content-promo')
+    let gratitudeClose = document.querySelector('.gratitude__close')
+
+    gratitudeBtn.addEventListener('click', () => {
+      gratitudeContent.classList.add('hidden')
+      gratitudePromo.classList.remove('hidden')
+    })
+
+      gratitudeClose.addEventListener('click', () => {
+        gratitude.classList.add('animate__fadeOut');
+        setTimeout(function() {
+          gratitude.classList.add('hidden');
+        }, 1000);
+    })
+  }
+})
+*/
+
 let gratitudeBtn = document.querySelector('.gratitude__btn');
 
 if(gratitudeBtn) {
@@ -615,6 +705,56 @@ if(gratitudeBtn) {
   })
 }
 
+let gratitudeMobileBtn = document.querySelector('.gratitude-mobile__btn');
+
+if(gratitudeMobileBtn) {
+  let gratitude = document.querySelector('.gratitude-mobile')
+  let gratitudeContent = document.querySelector('.gratitude-mobile__content')
+  let gratitudePromo = document.querySelector('.gratitude-mobile__content-promo')
+  let gratitudeClose = document.querySelector('.gratitude-mobile__close')
+
+  gratitudeMobileBtn.addEventListener('click', () => {
+    gratitudeContent.classList.add('hidden')
+    gratitudePromo.classList.remove('hidden')
+  })
+
+    gratitudeClose.addEventListener('click', () => {
+      gratitude.classList.add('animate__fadeOut');
+      setTimeout(function() {
+        gratitude.classList.add('hidden');
+      }, 600);
+  })
+}
+
+
+let btnCatalog = document.querySelector('.header-mobile__catalog');
+let openMobMenu = document.querySelector('.card__open-menu--mobile')
+
+if(btnCatalog) {
+  let headerPopup = document.querySelector('.header-popup')
+  let headerBtn = document.querySelector('.header-mobile__btn--catalog')
+
+  function openPopup () {
+    document.body.classList.toggle('mobile-no-scroll')
+    headerPopup.classList.toggle('mobile-scroll')
+    headerPopup.classList.toggle('active')
+    headerBtn.classList.toggle('active')
+  }
+
+  btnCatalog.addEventListener('click', (e) => {
+    e.preventDefault()
+    openPopup()
+  })
+
+  if(openMobMenu) {
+    openMobMenu.addEventListener('click', (e) => {
+      e.preventDefault()
+      openPopup()
+    })
+  }
+}
+
+
 // Получаем все кнопки тегов
 const tagButtons = document.querySelectorAll('.gallery__tag');
 if(tagButtons) {
@@ -635,6 +775,7 @@ if(tagButtons) {
     });
   });
 }
+
 
 
 const tagButtonsCateg = document.querySelectorAll('.categories__tag');
@@ -882,6 +1023,7 @@ if(buttonReadMore) {
   
   buttonReadMore.addEventListener('click', () => {
     if (!isExpandedText) {
+
       textMore.classList.add('product__more-text--show');
       textMoreBc.classList.add('opacity')
       buttonReadMore.textContent = 'Свернуть';
@@ -917,9 +1059,6 @@ if(buttonTagMore) {
     }
   });
 }
-
-
-
 
 let orderFormGroup = document.querySelector(".order-form__group-requisites");
 if(orderFormGroup) {
@@ -1098,11 +1237,12 @@ if(openButtonProduct) {
   const overlay = document.querySelector('.overlay')
   const cancelBtn = document.querySelector('.cart-popup__cancel')
 
-  function close () {
+  function close (e) {
     popupProduct.classList.add('hidden')
     overlay.classList.remove('show');
     overlay.classList.add('animate__fadeOut')
     document.body.classList.remove('no-scroll');
+    e.preventDefault()
   }
 
   openButtonProduct.forEach(function(button) {
@@ -1119,4 +1259,74 @@ if(openButtonProduct) {
   });
 }
 
+let galleryMore = document.querySelector('.gallery__more')
+
+if(galleryMore) {
+  let galleryItem = document.querySelector('.gallery__item--hidden')
+
+  galleryMore.addEventListener('click', () => {
+    galleryItem.classList.toggle('more')
+    galleryMore.classList.add('hidden')
+  })
+}
+
+let categoriesMore = document.querySelector('.categories__more')
+
+if(categoriesMore) {
+  let categoriesItem = document.querySelector('.categories-item--hidden')
+
+  categoriesMore.addEventListener('click', () => {
+    categoriesItem.classList.add('hidden')
+    categoriesMore.classList.add('hidden')
+  })
+}
+
+
+let productSliderImages = document.querySelector('.product-slider__images')
+if(productSliderImages) {
+  let arrowNext = document.querySelector('.product-slider__btn-main--next')
+  let arrowPrev = document.querySelector('.product-slider__btn-main--prev')
+  let productSlideDarkBcRight = document.querySelector('.product-slider__dark-bc--right')
+  let productSlideDarkBcLeft = document.querySelector('.product-slider__dark-bc--left')
+
+  arrowNext.addEventListener('click', () => {
+    if(arrowNext.classList.contains('swiper-button-disabled')) {
+      productSlideDarkBcRight.classList.add('hidden')
+    } else {
+      productSlideDarkBcRight.classList.remove('hidden')
+    }
+  })
+
+  arrowPrev.addEventListener('click', () => {
+    if(arrowPrev.classList.contains('swiper-button-disabled')) {
+      productSlideDarkBcLeft.classList.add('hidden')
+    } else {
+      productSlideDarkBcLeft.classList.remove('hidden')
+    }
+  })
+  
+}
+
+
+if(window.innerWidth < 899) {
+  let orderForm = document.querySelector('.order-form__group-requisites')
+  let radioElement7 = document.getElementById("radio7");
+  let radioElement8 = document.getElementById("radio8");
+
+  orderForm.classList.add('hidden')
+  
+  radioElement7.addEventListener("change", function() {
+    if (this.checked) {
+      orderForm.classList.remove('hidden')
+    } else {
+      orderForm.classList.add('hidden')
+    }
+  });
+  
+  radioElement8.addEventListener("change", function() {
+    if (this.checked) {
+      orderForm.classList.add('hidden')
+    }
+  });
+}
 
